@@ -1,0 +1,143 @@
+[{
+  "id": "63a79401-b65e-4472-a883-a8a900e36ae3",
+  "name": "My DEMO Collection",
+  "lastModified": "2018-03-20T17:48:00.113Z",
+  "maps": [{
+    "id": "813f6138-35ef-41aa-8e15-a8a900e4bbd1",
+    "collectionId": "63a79401-b65e-4472-a883-a8a900e36ae3",
+    "name": "Babel Demo Map",
+    "isDraft": false,
+    "isInUse": true,
+    "modifiedAt": "2018-03-21T10:20:48.197Z",
+    "lastModifiedByUserId": "16762F50-6F4E-4762-8C53-A7CA002C1E5C",
+    "lastModifiedBy": "Admin",
+    "sourceCategories": ["Medical Claims Header", "Medical Claims Detail"],
+    "isCrosswalkUpdated": false,
+    "formattedSourceCategories": "Medical Claims Header, Medical Claims Detail"
+  }, {
+    "id": "5f4a5f4c-86fe-4da8-8124-a8ac00145b4b",
+    "collectionId": "63a79401-b65e-4472-a883-a8a900e36ae3",
+    "name": "Babel Member Map",
+    "isDraft": false,
+    "isInUse": true,
+    "modifiedAt": "2018-03-23T06:57:31.793Z",
+    "lastModifiedByUserId": "16762F50-6F4E-4762-8C53-A7CA002C1E5C",
+    "lastModifiedBy": "Admin",
+    "sourceCategories": ["Member Eligibility", "Member Home Address", "Member Mailing Address", "Member Demographic"],
+    "isCrosswalkUpdated": false,
+    "formattedSourceCategories": "Member Eligibility, Member Home Address, Member Mailing Address, Member Demographic"
+  }, {
+    "id": "fec45099-671a-42b3-a657-a8bd0001b950",
+    "collectionId": "63a79401-b65e-4472-a883-a8a900e36ae3",
+    "name": "Error Correction",
+    "isDraft": false,
+    "isInUse": true,
+    "modifiedAt": "2018-04-09T05:09:16.863Z",
+    "lastModifiedByUserId": "16762F50-6F4E-4762-8C53-A7CA002C1E5C",
+    "lastModifiedBy": "Admin",
+    "sourceCategories": ["Medical Claims Header", "Medical Claims Detail"],
+    "isCrosswalkUpdated": false,
+    "formattedSourceCategories": "Medical Claims Header, Medical Claims Detail"
+  }, {
+    "id": "ff57be1d-964e-4030-a345-a8a900e79ef1",
+    "collectionId": "63a79401-b65e-4472-a883-a8a900e36ae3",
+    "name": "Babel Demo Map A",
+    "isDraft": true,
+    "isInUse": false,
+    "modifiedAt": "2018-04-25T15:45:25.623Z",
+    "lastModifiedByUserId": "81B37387-D34C-4D71-8F25-A7EC007A1917",
+    "lastModifiedBy": "Steve Helton",
+    "sourceCategories": ["Medical Claims Header", "Medical Claims Detail"],
+    "isCrosswalkUpdated": false,
+    "formattedSourceCategories": "Medical Claims Header, Medical Claims Detail"
+  }, {
+    "id": "40d1a297-1493-4684-bd8d-a8ba0024f559",
+    "collectionId": "63a79401-b65e-4472-a883-a8a900e36ae3",
+    "name": "Demo Data - Client H",
+    "isDraft": false,
+    "isInUse": true,
+    "modifiedAt": "2019-01-16T15:38:02.427Z",
+    "lastModifiedByUserId": "92202949-3584-49FF-BC60-A7EC006BCBF1",
+    "lastModifiedBy": "Betty Howell",
+    "sourceCategories": ["Medical Claims Header", "Medical Claims Detail"],
+    "isCrosswalkUpdated": true,
+    "formattedSourceCategories": "Medical Claims Header, Medical Claims Detail"
+  }, {
+    "id": "12e6aa7e-f10e-48e8-a321-a8bf002b5e24",
+    "collectionId": "63a79401-b65e-4472-a883-a8a900e36ae3",
+    "name": "Demo Member 2",
+    "isDraft": true,
+    "isInUse": false,
+    "modifiedAt": "2018-04-20T16:21:41.307Z",
+    "lastModifiedByUserId": "92202949-3584-49FF-BC60-A7EC006BCBF1",
+    "lastModifiedBy": "Betty Howell",
+    "sourceCategories": ["Member Eligibility", "Member Home Address", "Member Mailing Address", "Member Demographic"],
+    "isCrosswalkUpdated": false,
+    "formattedSourceCategories": "Member Eligibility, Member Home Address, Member Mailing Address, Member Demographic"
+  }]
+}, {
+  "id": "72d9b793-ec7e-49b9-a456-a7a90003affb",
+  "name": "Merge_maps",
+  "lastModified": "2018-07-11T11:08:27.733Z",
+  "maps": [{
+    "id": "96a453c4-7291-4839-9f22-a7a900045c9c",
+    "collectionId": "72d9b793-ec7e-49b9-a456-a7a90003affb",
+    "name": "Merged_claim_map",
+    "isDraft": false,
+    "isInUse": true,
+    "modifiedAt": "2018-10-04T09:19:45.477Z",
+    "lastModifiedByUserId": "75BE8E9C-65E9-41EB-B8CF-A7A80052BF71",
+    "lastModifiedBy": "Admin",
+    "sourceCategories": ["Medical Claims Header", "Medical Claims Detail"],
+    "isCrosswalkUpdated": true,
+    "formattedSourceCategories": "Medical Claims Header, Medical Claims Detail"
+  }, {
+    "id": "20dc5da7-ca24-431a-af74-a7e0004d59c4",
+    "collectionId": "72d9b793-ec7e-49b9-a456-a7a90003affb",
+    "name": "MergedClaims-XYZ - same-syscol",
+    "isDraft": false,
+    "isInUse": true,
+    "modifiedAt": "2018-08-31T08:50:57.27Z",
+    "lastModifiedByUserId": "75BE8E9C-65E9-41EB-B8CF-A7A80052BF71",
+    "lastModifiedBy": "Admin",
+    "sourceCategories": ["Medical Claims Header", "Medical Claims Detail"],
+    "isCrosswalkUpdated": false,
+    "formattedSourceCategories": "Medical Claims Header, Medical Claims Detail"
+  }, {
+    "id": "9db22478-b672-4dfd-98a2-a7e800524521",
+    "collectionId": "72d9b793-ec7e-49b9-a456-a7a90003affb",
+    "name": "Product_map",
+    "isDraft": false,
+    "isInUse": true,
+    "modifiedAt": "2018-09-08T09:00:26.437Z",
+    "lastModifiedByUserId": "75BE8E9C-65E9-41EB-B8CF-A7A80052BF71",
+    "lastModifiedBy": "Admin",
+    "sourceCategories": ["Product Reference"],
+    "isCrosswalkUpdated": false,
+    "formattedSourceCategories": "Product Reference"
+  }, {
+    "id": "bffc80da-911a-440f-8dfd-a8500023d577",
+    "collectionId": "72d9b793-ec7e-49b9-a456-a7a90003affb",
+    "name": "Merged-Claims_v2_Transform_check",
+    "isDraft": false,
+    "isInUse": true,
+    "modifiedAt": "2018-12-28T11:03:11.85Z",
+    "lastModifiedByUserId": "75BE8E9C-65E9-41EB-B8CF-A7A80052BF71",
+    "lastModifiedBy": "Admin",
+    "sourceCategories": ["Medical Claims Header", "Medical Claims Detail"],
+    "isCrosswalkUpdated": false,
+    "formattedSourceCategories": "Medical Claims Header, Medical Claims Detail"
+  }, {
+    "id": "59edca24-0bbc-451a-8d67-a894003eb7da",
+    "collectionId": "72d9b793-ec7e-49b9-a456-a7a90003affb",
+    "name": "Transformation_test",
+    "isDraft": false,
+    "isInUse": true,
+    "modifiedAt": "2019-03-05T08:31:37.823Z",
+    "lastModifiedByUserId": "75BE8E9C-65E9-41EB-B8CF-A7A80052BF71",
+    "lastModifiedBy": "Admin",
+    "sourceCategories": ["Medical Claims Header", "Medical Claims Detail"],
+    "isCrosswalkUpdated": false,
+    "formattedSourceCategories": "Medical Claims Header, Medical Claims Detail"
+  }]
+}]

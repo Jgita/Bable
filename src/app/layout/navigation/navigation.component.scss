@@ -1,0 +1,124 @@
+@import "variables";
+
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.header {
+  background: $header-nav;
+
+  .navbar {
+    padding: 0;
+
+    .navbar-nav {
+      flex-direction: row;
+    }
+
+    .nav-item {
+      padding: 0;
+
+      > a {
+        padding: 0 16px;
+        line-height: 60px;
+        font-size: 16px;
+        white-space: nowrap;
+
+        .material-icons {
+          vertical-align: top;
+          line-height: 60px;
+          font-size: 28px;
+        }
+      }
+    }
+    .nav-link {
+
+    }
+    .navbar-brand {
+      padding: 0;
+      line-height: 60px;
+
+      img {
+        vertical-align: text-bottom;
+      }
+    }
+  }
+  .navbar-expand-sm {
+    justify-content: space-between;
+  }
+  .dropdown-toggle::after {
+    display: none;
+  }
+
+  .dropdown {
+
+    &.show {
+      .dropdown-toggle {
+        background: $header-nav-hover;
+      }
+    }
+
+    .dropdown-menu {
+      margin-top: 0;
+      border: 0;
+      background: $header-nav-hover;
+      border-radius: 0;
+      padding: 0;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, .3);
+    }
+    .dropdown-item {
+      color: #fff;
+      padding: 8px 18px;
+
+      &:active, &:focus, &:hover {
+        background-color: rgba(0, 0, 0, .2);
+        color: #fff;
+      }
+    }
+  }
+}
+
+.nav-default-view {
+  > a {
+    background: rgba(200, 200, 200, .3);
+    > .program-label {
+      display: block;
+      text-align: center;
+      line-height: 24px;
+      font-size: 20px;
+      padding-top: 8px;
+    }
+    > .program-param-label {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      line-height: 26px;
+      padding-bottom: 2px;
+    }
+  }
+}
+
+#default-view-content {
+  color: #fff;
+  padding: 15px;
+}
+
+.dropdown-menu {
+  color: $white;
+}
+
+.header-notification-count {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  display: block;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  color: $white;
+}

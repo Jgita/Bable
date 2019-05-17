@@ -1,0 +1,44 @@
+{
+    "list": [{
+        "id": "76649a14-40b9-4192-86ce-a9db017d69d2",
+        "message": "The risk analysis score calculation process completed for uploaded claims",
+        "type": 0,
+        "tag": null,
+        "group": 0,
+        "unread": true,
+        "createdAt": "2019-01-21T04:08:41.013Z"
+    }, {
+        "id": "d9dac878-c07e-4656-be99-a9db017d54df",
+        "message": "Some error occurred while calculating risk analysis score, please contact administrator.",
+        "type": 0,
+        "tag": null,
+        "group": 0,
+        "unread": true,
+        "createdAt": "2019-01-21T04:08:23.137Z"
+    }, {
+        "id": "6fedaa81-168f-49d5-8d8a-a9db017cb074",
+        "message": "The risk analysis score calculation process started for uploaded claims",
+        "type": 0,
+        "tag": null,
+        "group": 0,
+        "unread": true,
+        "createdAt": "2019-01-21T04:06:02.833Z"
+    }, {
+        "id": "4e32d6c2-f7c6-4578-85d5-a9db017caa26",
+        "message": "RA Utility started. Score calculation process has started.",
+        "type": 1,
+        "tag": null,
+        "group": 0,
+        "unread": true,
+        "createdAt": "2019-01-21T04:05:57.457Z"
+    }, {
+        "id": "947470d0-0093-471a-9b40-a9db017ca8d8",
+        "message": "The validation process of the file \"Merged_claim_rule_check_13846_22_8_2017.txt\" is complete. You can review the data upload details <a href=\"https://dev02.dev.babelhealth.com/#/validationreports/record-view/0/741/64/6\" > here</a>.",
+        "type": 0,
+        "tag": null,
+        "group": 0,
+        "unread": true,
+        "createdAt": "2019-01-21T04:05:56.34Z"
+    }],
+    "unread": 13
+}

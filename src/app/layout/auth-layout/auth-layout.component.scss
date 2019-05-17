@@ -1,0 +1,40 @@
+.auth-layout{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+.auth-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1000px;
+  padding-top: 35px;
+  margin: 0 auto;
+}
+
+.auth-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;
+  flex: 1 1 0%;
+}
+.auth-footer{
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 80px;
+  color: rgb(255, 255, 255);
+  background: rgb(65, 64, 66);
+}
+
+.contact-us-link {
+  font-weight: 700;
+  text-transform: uppercase;
+  float: right;
+}

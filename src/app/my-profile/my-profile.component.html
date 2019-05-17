@@ -1,0 +1,145 @@
+<h2 class="margin-bottom-15">
+    My Profile
+    <button class="btn btn-primary float-right" (click)="editProfile()" *ngIf="!isEditMode">Edit</button>
+    <a routerLink="/my-profile/password" class="btn btn-primary float-right margin-right-5">Change Password</a>
+</h2>
+
+<div class="card">
+    <div class="card-body" *ngIf="isLoaded">
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Name</label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{profile.displayName}}</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Email Address</label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{profile.email}}</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Mobile Phone</label>
+            <div class="col-3">
+                <div class="form-control-plaintext" *ngIf="!isEditMode">{{profile.phoneNumber | phoneNumber}}</div>
+                <input type="text" class="form-control" [(ngModel)]="profile.phoneNumber" *ngIf="isEditMode"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Default Line of Business</label>
+            <div class="col-3">
+                <div class="form-control-plaintext" *ngIf="!isEditMode">{{profile.defaultLob}}</div>
+                <!--<input type="text" class="form-control" [(ngModel)]="profile.defaultLob" *ngIf="isEditMode"/>-->
+                <select class="form-control" [(ngModel)]="profile.defaultLob" *ngIf="isEditMode">
+                    <option value="medicare">Medicare</option>
+                    <option value="medicaid">State Programs</option>
+                    <option value="edge">EDGE</option>
+                    <option value="apcd">APCD</option>
+                </select>
+            </div>
+        </div>
+
+        <h4 class="margin-top-40 border-bottom">Medicare</h4>
+        <div class="form-group row" *ngIf="!isEditMode">
+            <label class="col-2 col-form-label">Turn off Email Notification</label>
+            <div class="col-3">
+                <div class="form-control-plaintext">{{profile.turnOffEmailNotification.medicare ? 'Yes': 'No'}}</div>
+            </div>
+        </div>
+        <div class="form-group row" *ngIf="isEditMode">
+            <label class="col-2">Turn off Email Notification</label>
+            <div class="col-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="turn-off-email-medicare" [(ngModel)]="profile.turnOffEmailNotification.medicare">
+                    <label class="form-check-label" for="turn-off-email-medicare">Turn off</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Permission Groups</label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{profile.roles.medicare.join(', ')}}</div>
+            </div>
+        </div>
+
+        <h4 class="margin-top-40 border-bottom">Medicaid</h4>
+        <div class="form-group row" *ngIf="!isEditMode">
+            <label class="col-2 col-form-label">Turn off Email Notification</label>
+            <div class="col-3">
+                <div class="form-control-plaintext">{{profile.turnOffEmailNotification.medicaid ? 'Yes': 'No'}}</div>
+            </div>
+        </div>
+        <div class="form-group row" *ngIf="isEditMode">
+            <label class="col-2">Turn off Email Notification</label>
+            <div class="col-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="turn-off-email-medicaid" [(ngModel)]="profile.turnOffEmailNotification.medicaid">
+                    <label class="form-check-label" for="turn-off-email-medicaid">Turn off</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Permission Groups</label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{profile.roles.medicaid.join(', ')}}</div>
+            </div>
+        </div>
+
+        <h4 class="margin-top-40 border-bottom">EDGE</h4>
+        <div class="form-group row" *ngIf="!isEditMode">
+            <label class="col-2 col-form-label">Turn off Email Notification</label>
+            <div class="col-3">
+                <div class="form-control-plaintext">{{profile.turnOffEmailNotification.edge ? 'Yes': 'No'}}</div>
+            </div>
+        </div>
+        <div class="form-group row" *ngIf="isEditMode">
+            <label class="col-2">Turn off Email Notification</label>
+            <div class="col-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="turn-off-email-edge" [(ngModel)]="profile.turnOffEmailNotification.edge">
+                    <label class="form-check-label" for="turn-off-email-medicaid">Turn off</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Permission Groups</label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{profile.roles.edge.join(', ')}}</div>
+            </div>
+        </div>
+
+        <h4 class="margin-top-40 border-bottom">APCD</h4>
+        <div class="form-group row" *ngIf="!isEditMode">
+            <label class="col-2 col-form-label">Turn off Email Notification</label>
+            <div class="col-3">
+                <div class="form-control-plaintext">{{profile.turnOffEmailNotification.apcd ? 'Yes': 'No'}}</div>
+            </div>
+        </div>
+        <div class="form-group row" *ngIf="isEditMode">
+            <label class="col-2">Turn off Email Notification</label>
+            <div class="col-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="turn-off-email-apcd" [(ngModel)]="profile.turnOffEmailNotification.apcd">
+                    <label class="form-check-label" for="turn-off-email-medicaid">Turn off</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Permission Groups</label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{profile.roles.apcd.join(', ')}}</div>
+            </div>
+        </div>
+
+
+
+        <div class="form-group row" *ngIf="isEditMode">
+            <label class="col-2 col-form-label">&nbsp;</label>
+            <div class="col-10">
+                <button type="button" class="btn btn-link" (click)="cancelEdit()">Cancel</button>
+                <button type="button" class="btn btn-primary" (click)="saveProfile()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

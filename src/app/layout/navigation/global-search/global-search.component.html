@@ -1,0 +1,123 @@
+<div id="global-search-container">
+    <div *ngIf="searchingState === 0">
+        <div class="btn-group btn-group-toggle margin-bottom-20" ngbRadioGroup name="radioBasic" [(ngModel)]="searchType">
+            <label ngbButtonLabel class="btn-light">
+                <input ngbButton type="radio" [value]="1"> Encounter
+            </label>
+            <label ngbButtonLabel class="btn-light">
+                <input ngbButton type="radio" [value]="2"> Member
+            </label>
+            <label ngbButtonLabel class="btn-light">
+                <input ngbButton type="radio" [value]="3"> Provider
+            </label>
+        </div>
+
+        <div *ngIf="searchType===1" class="row">
+            <div class="form-group col">
+                <label for="encounter-id">Encounter ID</label>
+                <input type="text" class="form-control" id="encounter-id" [(ngModel)]="searchParams.encounterId">
+            </div>
+        </div>
+        <div *ngIf="searchType===2" class="row">
+            <div class="form-group col">
+                <label for="member-id">Plan Member ID</label>
+                <input type="text" class="form-control" id="member-id" [(ngModel)]="searchParams.memberId">
+            </div>
+            <div class="form-group col">
+                <label for="member-last-name">Member Last Name</label>
+                <input type="text" class="form-control" id="member-last-name" [(ngModel)]="searchParams.memberLastName">
+            </div>
+            <div class="form-group col">
+                <label for="member-dob">Member DOB</label>
+                <input type="text" class="form-control" id="member-dob" [(ngModel)]="searchParams.memberDob">
+            </div>
+        </div>
+        <div *ngIf="searchType===3" class="row">
+            <div class="form-group col">
+                <label for="provider-id">Plan Provider ID</label>
+                <input type="text" class="form-control" id="provider-id" [(ngModel)]="searchParams.providerId">
+            </div>
+            <div class="form-group col">
+                <label for="provider-last-name">Provider Last Name</label>
+                <input type="text" class="form-control" id="provider-last-name" [(ngModel)]="searchParams.providerLastName">
+            </div>
+            <div class="form-group col">
+                <label for="provider-npi">Provider NPI</label>
+                <input type="text" class="form-control" id="provider-npi" [(ngModel)]="searchParams.providerNpi">
+            </div>
+        </div>
+    </div>
+    <div class="text-right">
+        <a href="javascript:" class="btn btn-link text-white margin-right-10 btn-outline-primary" (click)="cancel()">Cancel</a>
+        <button type="button" class="btn btn-light" (click)="search()">
+            {{ searchingState === 0 ? 'Search' : 'Search Again'}}
+        </button>
+    </div>
+
+    <div class="search-result" *ngIf="searchingState !== 0">
+        <div *ngIf="searchingState === 1">
+            Finding results for your search term. Your results should appear shortly.
+        </div>
+        <div *ngIf="searchingState === 2" class="margin-top-20">
+            <div *ngIf="!result.items.length">
+                We are sorry, your search returned no results.<br> Please edit your search and try again.
+            </div>
+            <div *ngIf="result.items.length">
+                <div *ngIf="searchType===1">
+                    <table class="table table-bordered table-striped table-sm margin-bottom-0 text-white">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th>Encounter ID</th>
+                            <th>Member Name</th>
+                            <th>Date of Service</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let item of result.items">
+                            <td><a href="javascript:">{{item.encounterId}}</a></td>
+                            <td><a href="javascript:">{{item.memberName}}</a></td>
+                            <td>{{item.dateOfService}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div *ngIf="searchType===2">
+                    <table class="table table-bordered table-striped table-hover table-sm margin-bottom-0">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th>Member Name</th>
+                            <th>Member ID</th>
+                            <th>Date of Birth</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let item of result.items">
+                            <td><a href="javascript:">{{item.memberName}}</a></td>
+                            <td><a href="javascript:">{{item.memberId}}</a></td>
+                            <td>{{item.memberDOB}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div *ngIf="searchType===3">
+                    <table class="table table-bordered table-striped table-hover table-sm margin-bottom-0">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th>Provider Name</th>
+                            <th>Provider ID</th>
+                            <th>Organization</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let item of result.items">
+                            <td><a href="javascript:">{{item.providerName}}</a></td>
+                            <td><a href="javascript:">{{item.providerId}}</a></td>
+                            <td>{{item.providerName}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

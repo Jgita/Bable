@@ -1,0 +1,22 @@
+{
+  "upcomingValidationWarnings": 63,
+  "upcomingResponseErrors": 0,
+  "upcomingSubmissionEncounter": 18,
+  "nextUpcomingDate": null,
+  "lastSubmissionRejectedEncounters": 0,
+  "lastSubmissionTotalEncounters": 6,
+  "allRejectedEncounters": 0,
+  "allEncounters": 311,
+  "upcomingSubmissionId": "75dffefd-d710-4fc7-ab60-a9ea0055bde5",
+  "upcomingSubmissionCount": 87,
+  "upcomingSubmissionContainerId": "c95d69a3-20be-4830-8c35-a9ea0055bde5",
+  "lastSubmissionTypeId": 10694,
+  "lastSubmissionBaseSegmentType": 10,
+  "lastSubmissionProgramProductWeight": 8,
+  "hasMap": true,
+  "hasFiles": true,
+  "hasSubmission": true,
+  "hasAnyUpcommingSubmission": true,
+  "batchSummary": [],
+  "nextUpcomingSubmission": "16261 03: Durable Medical Equipment DME"
+}

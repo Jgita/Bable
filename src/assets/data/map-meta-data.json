@@ -1,0 +1,182 @@
+{
+  "collections": [{
+    "id": "344915c3-01e3-4c84-b577-a7a8005930c1",
+    "title": "Collection"
+  }, {
+    "id": "72d9b793-ec7e-49b9-a456-a7a90003affb",
+    "title": "Merge_maps"
+  }, {
+    "id": "d2dfc4c3-cb28-461a-be0f-a7ac00712100",
+    "title": "Multi program"
+  }, {
+    "id": "62130b45-dda5-4e68-8785-a7ae00056779",
+    "title": "HM"
+  }, {
+    "id": "77c83aee-7fa9-44e0-99a8-a7bb001c60c2",
+    "title": "Unify_map"
+  }, {
+    "id": "907ccdbb-a655-4f05-bdc7-a7c200032ac0",
+    "title": "Merge Batch Three Files  Collection"
+  }, {
+    "id": "07c1e8b3-d4e7-4567-ab21-a7dd00483948",
+    "title": "Exported from Unify"
+  }, {
+    "id": "c0f97440-5f9e-4550-9ac6-a80f0187c4ea",
+    "title": "XYZ Data"
+  }, {
+    "id": "aca74b2d-c941-40d0-8f05-a81100304dbd",
+    "title": "GK_Trans_Maps_Oct19"
+  }, {
+    "id": "4e03ce5c-258b-4365-8466-a86d0009d22d",
+    "title": "CR Maps"
+  }, {
+    "id": "3249a0df-ee37-418e-8b88-a89000412612",
+    "title": "CB Transformation"
+  }, {
+    "id": "adf6d485-7de6-433c-83b8-a8b3001a9d2b",
+    "title": "uploaded New"
+  }, {
+    "id": "9b556052-67b0-412d-b248-a8c70017b5a2",
+    "title": "Transformation test"
+  }, {
+    "id": "63ce14fa-d206-4bc1-a40c-a92d0181b4c5",
+    "title": "APCD-MA Medical Claim"
+  }, {
+    "id": "ef6f6a23-dc61-493f-8d49-a92f00067d61",
+    "title": "APCD-MA Dental"
+  }, {
+    "id": "15fd077a-8215-44e6-9a2e-a92f000ea6d5",
+    "title": "APCD-MA Pharmacy"
+  }, {
+    "id": "ea166f1b-7688-46fe-819a-a92f000fc40c",
+    "title": "APCD-MA Provider"
+  }, {
+    "id": "57659e2a-8a69-4731-8756-a92f0078bbc5",
+    "title": "APCD-MA Member"
+  }, {
+    "id": "1d1db842-3d9f-4ea3-9c7e-a92f0079509c",
+    "title": "APCD-MA Product"
+  }, {
+    "id": "a7df7b11-8d99-4623-9ffd-a9530172e45b",
+    "title": "GLH_Medical_MA_EDPS_and_RAPs"
+  }, {
+    "id": "6e052c9e-3edf-4127-9c10-a97700349654",
+    "title": "538 col Maps"
+  }, {
+    "id": "1b9bae29-fb2f-4d07-abd4-a9810186cb5f",
+    "title": "XYZ Maps"
+  }, {
+    "id": "d9a792af-e02a-4183-a49d-a997006146b3",
+    "title": "GLH Data"
+  }, {
+    "id": "e189da11-3ae0-444f-a622-a9de0019546a",
+    "title": "RAPS"
+  }],
+  "selectedCollection": "e189da11-3ae0-444f-a622-a9de0019546a",
+  "categories": [{
+    "id": "d2f6f24f-bfdb-4737-9ffb-4d909dc314ed",
+    "title": "Provider"
+  }, {
+    "id": "ab96aebe-bc9f-4745-87cd-9e393655a558",
+    "title": "Dental Claim Header"
+  }, {
+    "id": "996642a2-1497-414d-94f4-a4130182e6cd",
+    "title": "Dental Claims"
+  }, {
+    "id": "63577774-658c-41c3-b50f-a4130182e6ee",
+    "title": "Member Eligibility"
+  }, {
+    "id": "9bb366d0-0320-4eed-8557-a4130182e6f7",
+    "title": "Member Home Address"
+  }, {
+    "id": "b3d60667-74dd-4f9b-8736-a4130182e6f7",
+    "title": "Member Mailing Address"
+  }, {
+    "id": "6e813e7b-6830-4bfd-89f9-a4130182e6f7",
+    "title": "Pharmacy Claims"
+  }, {
+    "id": "35d76382-67ab-4d99-8a69-a4130182e6f7",
+    "title": "Provider Demographic"
+  }, {
+    "id": "32fca531-c270-4d0d-90ef-a4130182e6f7",
+    "title": "Provider Office Address"
+  }, {
+    "id": "63a8a2c2-483f-4b5f-96b0-a4130182e6f7",
+    "title": "Member Demographic"
+  }, {
+    "id": "fbf0351b-f253-497e-9a48-a4130182e6f7",
+    "title": "Product Reference"
+  }, {
+    "id": "f503cf69-e60d-48e9-9a7e-a4130182e6f7",
+    "title": "Provider Contract"
+  }, {
+    "id": "8acffeb0-4ca2-429c-9b4a-a4130182e6f7",
+    "title": "Provider Mailing Address"
+  }, {
+    "id": "980ceebe-8d89-48d8-a7de-a4130182e6f7",
+    "title": "Medical Claims Header"
+  }, {
+    "id": "aed087d7-b6bf-4d88-a9a7-a4130182e6f7",
+    "title": "Member Permanent Address"
+  }, {
+    "id": "2d035ab2-1e32-4e3e-af2f-a4130182e6f7",
+    "title": "Provider Billing Address"
+  }, {
+    "id": "45744d38-cbfb-41e3-b1db-a4130182e6f7",
+    "title": "Provider Speciality"
+  }, {
+    "id": "bd395e31-98f0-4ca2-b689-a4130182e6f7",
+    "title": "Medical Claims Detail"
+  }, {
+    "id": "357d9d46-c3f6-4987-be7c-a4130182e6f7",
+    "title": "Member PCP History"
+  }, {
+    "id": "74e9e393-ba69-4c99-90c8-e47df3822a75",
+    "title": "Member"
+  }],
+  "programs": [{
+    "id": "de935032-aaf5-4e36-8af9-c80b2007a1c6",
+    "title": "APCD(CO)"
+  }, {
+    "id": "d1d72f0b-bb3d-4f79-b3df-ba04c65431c7",
+    "title": "APCD(MA)"
+  }, {
+    "id": "64983bf0-fcd6-4777-ae59-5aa1160016e0",
+    "title": "APCD(MD)"
+  }, {
+    "id": "fd3943e2-8025-422a-9426-34a03034d767",
+    "title": "APD(NY)"
+  }, {
+    "id": "95c3f965-abfa-4e84-80c7-ae38c2566747",
+    "title": "EDGE"
+  }, {
+    "id": "5553ae32-83f1-4a6d-804e-8feeeee6aab5",
+    "title": "EDPS"
+  }, {
+    "id": "8ab1485a-28f0-4331-b3e7-06c82df717f1",
+    "title": "RAPS"
+  }],
+  "selectedPrograms": ["8ab1485a-28f0-4331-b3e7-06c82df717f1", "5553ae32-83f1-4a6d-804e-8feeeee6aab5", "5553ae32-83f1-4a6d-804e-8feeeee6aab5", "5553ae32-83f1-4a6d-804e-8feeeee6aab5"],
+  "selectedCategories": ["980ceebe-8d89-48d8-a7de-a4130182e6f7", "bd395e31-98f0-4ca2-b689-a4130182e6f7"],
+  "sourceFiles": [{
+    "name": "NEW DEIDENTIFIED FOR RAPS VOLUME TEST-frMap.txt",
+    "type": "txt",
+    "sizeInBytes": 60621.0,
+    "size": "59.2KB",
+    "fieldCount": 349,
+    "rowCount": 61
+  }],
+  "outputFormats": [{
+    "id": "41d93a50-2c46-4906-ba4e-252123540c49",
+    "title": "CMS EDPS: Durable Medical Equipment (DME)"
+  }, {
+    "id": "50964bb8-e62d-4ca6-ab0e-90f2d300f384",
+    "title": "CMS EDPS: Institutional"
+  }, {
+    "id": "8ea0f737-1b46-4f72-8cea-d193ea6e1522",
+    "title": "CMS EDPS: Professional"
+  }, {
+    "id": "8af3f3dd-d4ff-48b5-ada1-69a129388f98",
+    "title": "CMS RAPS: RAPS Submission"
+  }]
+}

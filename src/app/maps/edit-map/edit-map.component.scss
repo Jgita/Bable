@@ -1,0 +1,135 @@
+@import "variables";
+
+$m-canvas-max-height: 580px;
+
+/*
+.field {
+  background: #ebf0f3;
+  border: 1px solid #898989;
+  border-radius: 3px;
+  padding: 0 6px;
+  display: inline-block;
+  cursor: move;
+  font-size: 12px;
+  box-shadow: 1px 1px 0 #fff inset;
+  text-shadow: 0 1px 0 #ebf0f3;
+
+  .material-icons {
+    font-size: 18px;
+    margin-left: 5px;
+    color: initial;
+  }
+}
+*/
+
+.field-wrapper {
+  padding: 2px 0;
+}
+
+.m-canvas {
+  overflow: hidden;
+}
+
+.m-canvas-left, .m-canvas-right {
+  max-height: $m-canvas-max-height;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.m-canvas-left {
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  z-index: 1;
+}
+
+.m-canvas-right {
+
+}
+
+
+
+
+
+
+
+.example-list {
+  max-width: 100%;
+  min-height: 60px;
+  display: block;
+  background: white;
+  overflow: hidden;
+}
+
+.example-box {
+  padding: 8px 10px;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: white;
+  font-size: 14px;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+  0 8px 10px 1px rgba(0, 0, 0, 0.14),
+  0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.pair{
+  border-bottom: solid 1px #ccc;
+
+  .column{
+
+  }
+  .column-left{
+    width: 50%;
+  }
+  .column-mid {
+    border-left: solid 1px #eee;
+    border-right: solid 1px #eee;
+    width: 50px;
+    padding: 8px 10px;
+    text-align: center;
+  }
+  .column-right{
+    width: 50%;
+  }
+}
+.auto-mapped{
+  background: #cfe6e4;
+  .field{
+    background: #cfe6e4;
+  }
+}
+.drag-indicator{
+  color: rgba(100,100,100,.3);
+  margin-left: -8px;
+}
+.pair-input{
+  text-align: right;
+  justify-content: flex-end;
+}
+.draggable{
+  cursor: move;
+}

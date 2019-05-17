@@ -1,0 +1,90 @@
+@import "variables";
+
+#notifications-summary {
+  width: 455px;
+  color: $white;
+
+  .ns-header {
+    padding: .7rem 1rem;
+    background: rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+
+    h5 {
+      margin: 0;
+    }
+  }
+  a {
+    text-transform: none;
+    color: $white;
+  }
+
+  .ns-entry {
+    padding: 0.7rem 30px 0.7rem 1rem;
+    word-break: break-word;
+    position: relative;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    a {
+      text-decoration: underline;
+      display: initial;
+      white-space: normal;
+      color: $white;
+    }
+
+    .ns-message {
+      font-size: 13px;
+    }
+
+    .ns-entry-footer {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 12px;
+      margin-top: 4px;
+
+      i {
+        font-size: 16px;
+        margin-right: 5px;
+        text-align: left;
+        width: auto;
+      }
+      a {
+        color: rgba(255, 255, 255, .7);
+      }
+    }
+  }
+
+  a.ns-btn-unread {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    width: 30px;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 12px;
+      margin: 0;
+      padding: 10px 5px;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:hover, &:focus {
+      background: transparent;
+    }
+  }
+
+  .ns-footer {
+    background: rgba(0, 0, 0, .1);
+  }
+}

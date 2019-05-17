@@ -1,0 +1,75 @@
+<h2 class="margin-bottom-15">Organization Profile</h2>
+
+<div class="card">
+    <div class="card-body" *ngIf="isLoaded">
+        <div class="form-group row">
+            <label class="col-3 col-form-label" for="org-name">Organization Name</label>
+            <div class="col-4">
+                <input type="text" class="form-control" id="org-name" [(ngModel)]="organization.name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-3 col-form-label" for="org-short-name">Organization Short Name</label>
+            <div class="col-4">
+                <input type="text" class="form-control" id="org-short-name" [(ngModel)]="organization.shortName">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-3 col-form-label" for="org-admin-email">Admin Email Address</label>
+            <div class="col-4">
+                <input type="text" class="form-control" id="org-admin-email" [(ngModel)]="organization.email">
+                <ng-template #popContent>
+                    Editing this address will:
+                    <ul class="margin-bottom-0">
+                        <li>Send an account verification email to this new Email address</li>
+                        <li>End your session and log you out automatically</li>
+                    </ul>
+                </ng-template>
+                <a href="javascript:"
+                   [ngbPopover]="popContent"
+                   triggers="mouseenter:mouseleave"
+                   placement="right"
+                   popoverClass="width-400"
+                   class="form-element-info"><i class="material-icons">info_outline</i></a>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-3 col-form-label">Organization URL</label>
+            <div class="col-4">
+                <div class="form-control-plaintext">{{organization.url}}</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-3 col-form-label" for="org-logo">Organization Logo</label>
+            <div class="col-4">
+                <input type="text" class="form-control" id="org-logo" [(ngModel)]="organization.logoFile">
+                <small class="form-text text-muted">Allowed file types are .gif, .jpg, and .png</small>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-3 col-form-label" for="org-enc-key">File Encryption Key</label>
+            <div class="col-4">
+                <input type="text" class="form-control" id="org-enc-key" [(ngModel)]="organization.fileEncryptionKey">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="org-enc-all" [(ngModel)]="organization.isEncryptAllDownloadedFile">
+                    <label class="form-check-label" for="org-enc-all">
+                        Encrypt all downloaded file (<a href="javascript:">How to Encrypt?</a>)
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-3 col-form-label">Authentication Mode</label>
+            <div class="col-4">
+                <strong class="form-control-plaintext">Stand-Alone</strong>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-3 col-form-label">&nbsp;</label>
+            <div class="col-4">
+                <button type="button" class="btn btn-primary" (click)="saveOrganizationProfile()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

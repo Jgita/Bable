@@ -1,0 +1,27 @@
+@import "variables";
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.display-block {
+  display: block !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a.disabled {
+  cursor: not-allowed;
+  opacity: .5;
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}

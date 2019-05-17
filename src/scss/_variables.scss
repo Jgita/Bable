@@ -1,0 +1,73 @@
+// Reboot
+$font-size-root:          .875rem;
+$font-family-sans-serif:  "Open Sans","Helvetica","Arial",sans-serif;
+$body-bg:                 #f9fafc;
+$body-color:              #231f20;
+
+//
+// Color system
+//
+
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$blue:     #518ecc;
+$indigo:   #6610f2;
+$purple:   #6f42c1;
+$pink:     #e83e8c;
+$red:      #da1600;
+$orange:   #fd7e14;
+$yellow:   #ffc107;
+$green:    #28a745;
+$teal:     #20c997;
+$cyan:     #17a2b8;
+
+$primary:  #009688; // medicaid
+//$primary:  #15659d; // medicare
+//$primary: #876e8d; // edge
+//$primary: #8f7062; // apcd
+
+$secondary:$gray-600;
+$success:  $green;
+$info:     $cyan;
+$warning:  $yellow;
+$danger:   $red;
+$light:    $gray-100;
+$dark:     $gray-800;
+
+
+
+// Header nav
+$header-nav:              darken($primary, 10%);// #004765
+$header-nav-hover:        $primary;  // $primary
+
+
+// Table
+$table-dark-color:        $white;
+$table-dark-accent-bg:    darken($primary, 10%);
+$table-dark-hover-bg:     darken($primary, 10%);
+$table-dark-border-color: darken($primary, 10%);
+$table-dark-bg:           darken($primary, 10%);
+
+// Forms
+$label-font-weight:       bold;
+
+// buttons
+$input-btn-focus-width: 0;  // to avoid focus box-shadow
+$btn-padding-x:         1.5rem;
+
+// card
+$card-border-color:     #ededed;
+
+// custom control
+$custom-control-indicator-checked-bg: darken($primary, 10%);
+$custom-control-indicator-size:         1.1rem

@@ -1,0 +1,21 @@
+<div class="container-fluid card stats bg-white" *ngIf="isLoaded">
+    <div class="row">
+        <div class="col stat">
+            <h5 class="stat-header">Last Upload</h5>
+            <div class="stat-about">Erroneous Encounters</div>
+            <div class="stat-count">{{uploadSummary.currentErroneousRecordsCount | number}}</div>
+            <div class="stat-sub">out of {{uploadSummary.encounterCount | number}} Encounters</div>
+        </div>
+        <div class="col stat stat-all">
+            <h5 class="stat-header">All Uploads <span class="text-muted">({{uploadSummary.uploadedFileCount | number}} files)</span></h5>
+            <div class="stat-about">Erroneous Encounters</div>
+            <div class="stat-count">{{uploadSummary.totalErroneousEncounter | number}}</div>
+            <div class="stat-sub">out of {{uploadSummary.totalEncounter | number}} encounters</div>
+        </div>
+        <div class="col stat stat-warning"
+             [ngClass]="{'stat-acceptable': uploadSummary.percentageInError <= 2, 'stat-caution': uploadSummary.percentageInError> 2 && uploadSummary.percentageInError <= 5, 'stat-warning': uploadSummary.percentageInError> 5 }">
+            <h5 class="stat-header">Overall Error Rate</h5>
+            <div class="stat-percentage">{{uploadSummary.percentageInError}}<sup>%</sup></div>
+        </div>
+    </div>
+</div>

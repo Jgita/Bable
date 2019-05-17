@@ -1,0 +1,97 @@
+<p>
+    Match your source fields on the left to the fields on the right. All crosswalks must be determined before you can
+    validate data.
+</p>
+<div class="card" *ngIf="isLoading">
+    <div class="card-body padding-50 text-center">
+        Loading...
+    </div>
+</div>
+<div class="card card-with-action border-primary" *ngIf="!isLoading">
+    <div class="card-header text-white bg-primary border-0">
+        <h5>Edit Map: <small>(Test)</small></h5>
+        <div class="card-action" ngbDropdown placement="bottom-right">
+            <a href="javascript:" ngbDropdownToggle><i class="material-icons">menu</i></a>
+            <div ngbDropdownMenu>
+                <a href="javascript:" class="dropdown-item">Edit Metadata</a>
+                <a class="dropdown-item">Edit Source Elements</a>
+                <a class="dropdown-item">Publish</a>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex m-canvas" cdkDropListGroup>
+        <div class="flex-grow-1 width-percent-30 m-canvas-left">
+            <div class="m-head"></div>
+            <div class="m-body"
+                 cdkDropList
+                 [cdkDropListData]="mapData.inputFields">
+                <div class="example-box draggable" *ngFor="let field of mapData.inputFields" cdkDrag>
+                    <div class="" [ngClass]="{'used': field.isMapped}">
+                        <i class="material-icons drag-indicator margin-right-5">drag_indicator</i>
+                        <span>{{field.title}}</span>
+                        <a class="link-short-description"
+                           *ngIf="field.sampleValues.length"
+                           triggers="mouseenter:mouseleave"
+                           placement="top"
+                           popoverTitle="Sample Values"
+                           [ngbPopover]="popContent"
+                           container="body"
+                           href="javascript:"><i class="material-icons">info_outline</i></a>
+                        <ng-template #popContent>
+                            <ul class="list-unstyled margin-0">
+                                <li *ngFor="let s of field.sampleValues">{{s.length ? s : "[empty]"}}</li>
+                            </ul>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-grow-2 width-percent-70 m-canvas-right">
+            <div class="d-flex pair"
+                 *ngFor="let pair of mapData.pairs"
+                 [ngClass]="{'auto-mapped': pair.isAutoMapped}"
+                 (click)="dumpDataToConsole(pair)">
+
+                <div class="flex-grow-1 column column-left"
+                     cdkDropList
+                     [cdkDropListData]="pair"
+                     [cdkDropListDisabled]="pair.inputIds.length"
+                     (cdkDropListDropped)="drop($event)">
+                    <div class="example-box draggable field pair-input" *ngFor="let inputField of pair.inputFields" cdkDrag>{{inputField.title}}</div>
+                </div>
+
+                <div class="flex-grow-1 column column-mid"><i class="material-icons">check_circle</i></div>
+
+                <div class="flex-grow-1 column column-right">
+                    <div class="example-box field">{{pair.targetField.title}}</div>
+                </div>
+
+            </div>
+
+            <!--<div *ngFor="let item of allMapping" (click)="dumpDataToConsole(item)">
+                <div>
+
+                    <div class="mapping-tr field-type-lookup" [class]="{'block':mapping.validation.isBusy, 'field-type-lookup': mapping.targetField.crosswalkValues.length, 'occupied': mapping.inputIds.length, 'auto-mapped': mapping.isAutoMapped, 'crosswalk-done': mapping.isCrosswalkComplete}">
+                        <div class="mapping-row">
+                            <div class="mapping-column input-field-td field-holder input-field-holder" cdkDropList></div>
+                            <div class="mapping-column action-td" (click)="showMappingDetails(mapping.targetId, 2)">
+                                &nbsp;
+                            </div>
+
+                            <div class="mapping-column output-field-td field-holder target-field-holder">
+                                <div class="mapping-field target-field" [class]="{'field-required': (field.isRequired)}" (click)="showMappingDetails(mapping.targetId, 1)">
+                                    <span>APCD ID Code (Medical)</span>
+                                    <a class="link-short-description" href="javascript:;"><i class="fa fa-info-circle"></i></a>
+                                </div>
+                                <a *ngIf="mapping.targetField.crosswalkValues.length" class="link-crosswalk" href="javascript:;" (click)="showMappingDetails(mapping.targetId, 4)"></a>
+                            </div>
+                        </div>
+                    </div>
+                    &lt;!&ndash; ngIf: mapping.targetId == targetFieldIdForShowingDetails &ndash;&gt;
+                </div>
+
+            </div>-->
+
+        </div>
+    </div>
+</div>

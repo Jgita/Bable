@@ -1,0 +1,7 @@
+{
+    "/api": {
+        "target": "https://multiline.dev.babelhealth.com",
+        "secure": true,
+        "changeOrigin": true
+    }
+}

@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+// import own variables to override bootstrap
+@import "scss/fonts";
+@import "scss/variables";
+// import bootstrap
+@import "scss/bootstrap/bootstrap";
+// import custom or bootstrap overrides
+@import "scss/helpers/helpers";
+@import "scss/components/components";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+html {
+  font-size: $font-size-root;
+}
+
+body {
+
+}
+
+a {
+  font-weight: 600;
+}
+
+label {
+  font-weight: 700;
+}
+
+.table {
+  thead th {
+    vertical-align: bottom;
+  }
+  tbody td, tbody th {
+    vertical-align: middle;
+  }
+}
+
+.body-container {
+  max-width: 1400px;
+  min-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cell-action > .dropdown-toggle {
+  display: block;
+
+  i {
+    font-size: 24px;
+  }
+  &::after {
+    display: none !important;
+  }
+}
+
+.dropdown-toggle:not(.btn)::after {
+  display: none !important;
+}
+
+.form-check-label {
+  font-weight: 600;
+}
+
+.card-body.slim{
+  padding: 1rem;
+}
+
+ng-select{
+  vertical-align: middle;
+}

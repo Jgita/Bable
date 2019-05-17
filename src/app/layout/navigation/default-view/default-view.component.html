@@ -1,0 +1,73 @@
+<div class="row form-horizontal">
+    <div class="col-4">
+        <h5>Set your default views for browsing {{activeProgram | uppercase}} data and reports in Babel.</h5>
+        <p>Any searches you run can override this data.</p>
+    </div>
+    <div class="col-4">
+        <div class="form-group" *ngIf="activeProgram === 'medicare'">
+            <label class="control-label">Set my default program to</label>
+            <div>
+                <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="params.program">
+                    <label ngbButtonLabel class="btn-light">
+                        <input ngbButton type="radio" value="edps"> EDPS
+                    </label>
+                    <label ngbButtonLabel class="btn-light">
+                        <input ngbButton type="radio" value="raps"> RAPS
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" *ngIf="activeProgram==='medicaid'">
+            <label class="control-label">Sub Program</label>
+            <div>
+                <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="params.subProgram">
+                    <label ngbButtonLabel class="btn-light" *ngFor="let item of subprograms" [ngClass]="{'activeRadioBtn': item.name == radioSelected}">
+                        <input ngbButton type="radio" value="{{item.name}}" [(ngModel)]="radioSelected"> {{item.name}}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" *ngIf="activeProgram==='medicaid'">
+            <label class="control-label">State</label>
+            <div>
+                <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="params.state">
+                    <label ngbButtonLabel class="btn-light" *ngFor="let item of states" [ngClass]="{'activeRadioBtn': item.companyStateCode == stateSelected}">
+                        <input ngbButton type="radio" value="{{item.companyStateCode}}" [(ngModel)]="stateSelected"> {{item.companyStateCode}}
+                    </label>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="form-group" *ngIf="activeProgram === 'medicaid'">
+            <label class="control-label">For reporting period</label>
+            <div>
+                <select class="form-control" [(ngModel)]="params.reportingPeriod">
+                    <option *ngFor="let year of benefitYears" value={{year}}>
+                        Year {{year}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group" *ngIf="activeProgram !== 'medicaid'">
+            <label class="control-label">For dates of service</label>
+            <div>
+                <select class="form-control" [(ngModel)]="params.dos">
+                    <option *ngFor="let year of benefitYears" value={{year}}>
+                        Year {{year}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">For contracts</label>
+            <ng-select [items]="contracts | async" [multiple]="true" [closeOnSelect]="false" [searchable]="false" bindLabel="name" placeholder="Select contracts">
+            </ng-select>
+        </div>
+    </div>
+</div>
+<div class="text-right">
+    <a href="javascript:;" class="btn btn-link text-white margin-right-10 btn-outline-primary" (click)="cancel()">Cancel</a>
+    <button type="button" class="btn btn-light" (click)="save()">Set Defaults</button>
+</div>

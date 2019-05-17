@@ -1,0 +1,51 @@
+[{
+  "contractId": "S0137",
+  "programWeights": [64, 128, 8],
+  "contractName": "A2YL",
+  "contractType": "Medicare"
+}, {
+  "contractId": "S2225",
+  "programWeights": [64, 128, 8],
+  "contractName": "A2YL",
+  "contractType": "Medicare"
+}, {
+  "contractId": "S9999",
+  "programWeights": [64, 128, 8],
+  "contractName": "A2Yl H9999",
+  "contractType": "Medicare"
+}, {
+  "contractId": "S9998",
+  "programWeights": [64, 128, 8],
+  "contractName": "A2YL INC",
+  "contractType": "Medicare"
+}, {
+  "contractId": "S0332",
+  "programWeights": [64, 128, 8],
+  "contractName": "A2YL INC H0332",
+  "contractType": "Medicare"
+}, {
+  "contractId": "131414",
+  "programWeights": [64, 128, 8],
+  "contractName": "NM2",
+  "contractType": "Medicare"
+}, {
+  "contractId": "ENC017",
+  "programWeights": [64, 128, 8],
+  "contractName": "NM2",
+  "contractType": "Medicare"
+}, {
+  "contractId": "S0199",
+  "programWeights": [64, 128, 8],
+  "contractName": "Org 123",
+  "contractType": "Medicare"
+}, {
+  "contractId": "S3071",
+  "programWeights": [64, 128, 8],
+  "contractName": "A2YL INC",
+  "contractType": "MMP"
+}, {
+  "contractId": "S3072",
+  "programWeights": [64, 128, 8],
+  "contractName": "A2YL INC2",
+  "contractType": "MMP"
+}]

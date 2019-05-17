@@ -1,0 +1,64 @@
+<h2 class="margin-bottom-15">
+    Maps
+    <a routerLink="/maps/create-collection" class="btn btn-primary float-right">Create Collection</a>
+    <a href="javascript:" class="btn btn-primary float-right margin-right-10">Create Map</a>
+</h2>
+<p>
+    Maps are created within collections. You may create an unlimited number of collections and maps.
+</p>
+
+<div *ngIf="collections.length">
+    <div class="card card-with-action border-primary mb-3" *ngFor="let collection of collections">
+        <div class="card-header text-white bg-primary border-0">
+            <h5>{{collection.name}}</h5>
+            <div class="card-action" ngbDropdown placement="bottom-right">
+                <a href="javascript:" ngbDropdownToggle><i class="material-icons">menu</i></a>
+                <div ngbDropdownMenu>
+                    <a href="javascript:" class="dropdown-item">Add Map</a>
+                    <a class="dropdown-item">Edit Collection</a>
+                    <a class="dropdown-item">Delete Collection</a>
+                    <a class="dropdown-item">Import Map</a>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered table-striped table-hover margin-bottom-0">
+            <thead class="thead-dark">
+            <tr>
+                <th>Map Name</th>
+                <th class="width-100">Status</th>
+                <th class="width-200">Last Modified Date</th>
+                <th class="width-150">Last Modified By</th>
+                <th>Source Categories</th>
+                <th class="width-50">&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let map of collection.maps">
+                <th>{{map.name}}</th>
+                <td>
+                    <span *ngIf="map.isDraft" class="badge badge-primary" placement="top"
+                          ngbTooltip="{{'Drafted by ' + map.lastModifiedBy}}">Draft</span>
+                    <ng-template #tipContent>This map is currently in use. <br /> (You may not edit this map) <br /> <br /> You can duplicate this map by using the actions in the table.</ng-template>
+                    <span *ngIf="map.isInUse" class="badge badge-success" placement="top"
+                          [ngbTooltip]="tipContent">In Use</span>
+                    <span *ngIf="!(map.isDraft || map.isInUse)" class="badge badge-info" placement="top"
+                          ngbTooltip="Published">Published</span>
+                </td>
+                <td>{{map.modifiedAt | date:'medium'}}</td>
+                <td>{{map.lastModifiedBy}}</td>
+                <td>{{map.formattedSourceCategories}}</td>
+                <td class="text-center cell-action" ngbDropdown placement="bottom-right">
+                    <a href="javascript:" ngbDropdownToggle><i class="material-icons">flash_on</i></a>
+                    <div ngbDropdownMenu>
+                        <a routerLink="/maps/edit-map" class="dropdown-item">Edit Map</a>
+                        <a href="javascript:" class="dropdown-item">Clone Map</a>
+                        <a href="javascript:" class="dropdown-item">Delete Map</a>
+                        <a href="javascript:" class="dropdown-item">Export Map</a>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

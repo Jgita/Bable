@@ -1,0 +1,22 @@
+{
+  "shortName": "Mediorg",
+  "url": "http://3.82.85.87",
+  "fileEncryptionKey": null,
+  "logoFile": null,
+  "domainAddress": null,
+  "baseDN": null,
+  "domainUserName": null,
+  "domainPassword": null,
+  "hasUsers": true,
+  "isEncryptAllDownloadedFile": false,
+  "id": "72fac1df-282b-416a-958e-a7c200161a75",
+  "userId": "16762F50-6F4E-4762-8C53-A7CA002C1E5C",
+  "name": "Medicaid Organization",
+  "email": "support@babelhealth.com",
+  "disabled": false,
+  "authentication": 0,
+  "emailConfirmed": true,
+  "phoneConfirmed": false,
+  "status": 1,
+  "adminDisabled": false
+}

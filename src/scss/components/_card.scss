@@ -1,0 +1,38 @@
+@import "variables";
+
+.card {
+  &.card-with-action{
+    .card-header{
+      position: relative;
+
+      h5{
+        margin: 0;
+      }
+
+      .card-action{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50px;
+
+        > a{
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: rgba(0,0,0,.1);
+          text-align: center;
+          line-height: 100%;
+          color: $white;
+
+          i{
+            line-height: 42px;
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}

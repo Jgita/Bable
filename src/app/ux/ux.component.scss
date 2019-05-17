@@ -1,0 +1,46 @@
+@import "variables";
+
+.color {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-right: 10px;
+
+}
+
+section {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #eee;
+
+  > * + h3 {
+    margin-top: 40px;
+  }
+}
+
+#rel {
+  position: relative;
+}
+
+#section-nav {
+  background: #fff;
+  padding: 10px 0;
+  border: 1px solid #eee;
+  position: sticky;
+  top: 75px;
+
+  .nav-link {
+    padding: 3px 1rem;
+    font-weight: 400;
+
+    &.top{
+      border-top: 1px solid #eee;
+    }
+  }
+}
+
+#dropdown-example{
+  position: static;
+  display: block;
+}

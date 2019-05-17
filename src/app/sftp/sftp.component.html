@@ -1,0 +1,54 @@
+<h2 class="margin-bottom-15">FTP Credentials</h2>
+<p>
+    Use the following credentials to login securely to our ftp server for your data upload into Babel.
+    This information is subject to change on a periodic basis.
+    Please make sure you check here for the latest credentials before you begin transferring data files into Babel.
+</p>
+
+<div class="card">
+    <div class="card-body" *ngIf="isLoaded">
+        <div class="form-group row">
+            <label class="col-2 col-form-label">FTP Server Address</label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{credential.sftpAddress}}</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">FTP Server Port</label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{credential.port}}</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Protocol</label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{credential.protocol}}</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Username</label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{credential.sftpUserName}}</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">
+                Password
+                <a href="javascript:" class="margin-left-10" (click)="togglePasswordVisibility()" title="{{isPasswordVisible?'Hide':'Show'}}">
+                    <i class="material-icons">
+                        {{isPasswordVisible?'visibility_off':'visibility'}}
+                    </i>
+                </a>
+            </label>
+            <div class="col-10">
+                <div class="form-control-plaintext">{{printPassword(credential.sftpPassword)}}</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">&nbsp;</label>
+            <div class="col-10">
+                <button type="button" class="btn btn-primary" (click)="resetCredentials()">Reset Credentials</button>
+            </div>
+        </div>
+    </div>
+</div>

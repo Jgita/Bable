@@ -1,0 +1,66 @@
+<div class="d-flex flex-column content">
+
+    <div class="p-2 d-flex flex-column justify-content-center flex-fill">
+        <h1 class="text-primary">Welcome back, Admin!</h1>
+        <p class="lead">We knew you could not stay away from us for long.</p>
+        <div class="margin-top-50 margin-bottom-10 text-center font-weight-bold text-black-50 lead">
+            Switch to:
+        </div>
+        <ul class="list-group list-group-horizontal programs">
+            <li class="list-group-item flex-fill program"
+                *ngFor="let program of programs"
+                [ngClass]="{'selected': currentProgram == program.key}"
+                (click)="changeProgram(program.key)">
+
+                {{program.value}}
+                <i class="material-icons">check</i>
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="p-2 flex-fill splash-footer">
+        <p class="lead">
+            Last time you were browsing the <a href="javascript:">View Submission Activity</a> page.
+            Where do you want to go now?
+        </p>
+        <div class="link-container">
+            <section class="link-left">
+                <a href="javascript:" class="nav-item" id="splash-last">
+                    <div class="title">Last Visited</div>
+                    <div class="icon"><i class="material-icons">history</i></div>
+                </a>
+            </section>
+            <section class="link-main">
+                <div class="link-row row-1">
+                    <a routerLink="/dashboard" class="nav-item link-item" id="splash-dashboard">
+                        <div class="icon"><i class="material-icons">dashboard</i></div>
+                        <div class="title">Dashboard</div>
+                    </a>
+                    <a routerLink="/data" class="nav-item link-item" id="splash-data">
+                        <div class="icon"><i class="material-icons">list_alt</i></div>
+                        <div class="title">View Data</div>
+                    </a>
+                    <a routerLink="/uploads" class="nav-item link-item" id="splash-upload-activity">
+                        <div class="icon"><i class="material-icons">cloud_upload</i></div>
+                        <div class="title">View Upload Activity</div>
+                    </a>
+                </div>
+                <div class="link-row row-2">
+                    <a href="javascript:" class="nav-item link-item" id="splash-maps">
+                        <div class="icon"><i class="material-icons">layers</i></div>
+                        <div class="title">Workflow</div>
+                    </a>
+                    <a href="javascript:" class="nav-item link-item" id="splash-submission-activity">
+                        <div class="icon"><i class="material-icons">send</i></div>
+                        <div class="title">View Submission Activity</div>
+                    </a>
+                    <a routerLink="/submissions" class="nav-item link-item" id="splash-upcoming">
+                        <div class="icon"><i class="material-icons">timer</i></div>
+                        <div class="title">View Upcoming Submissions</div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

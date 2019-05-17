@@ -1,0 +1,7 @@
+<div class="wizard margin-bottom-15">
+    <a href="javascript:"
+       *ngFor="let step of steps"
+       [class.active]="step.id === activeStepId"
+       [class.pointer]="step.id !== activeStepId && allowRandomStepping"
+       (click)="setActiveWizardStep($event, step)">{{step.text}}</a>
+</div>

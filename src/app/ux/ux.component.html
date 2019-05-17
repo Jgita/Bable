@@ -1,0 +1,785 @@
+<div class="row" id="top">
+    <div class="col-2">
+        <div class="nav flex-column nav-pills" id="section-nav">
+            <a class="nav-link" *ngFor="let section of sections" href="ux#{{section}}">{{section | titlecase}}</a>
+            <a class="nav-link top" href="ux#top">Go to Top</a>
+        </div>
+    </div>
+    <div class="col-10">
+        <section id="typography">
+            <div>
+                <h1>h1. Bootstrap heading <small class="text-muted">With faded secondary text</small></h1>
+                <h2>h2. Bootstrap heading <small class="text-muted">With faded secondary text</small></h2>
+                <h3>h3. Bootstrap heading <small class="text-muted">With faded secondary text</small></h3>
+                <h4>h4. Bootstrap heading <small class="text-muted">With faded secondary text</small></h4>
+                <h5>h5. Bootstrap heading <small class="text-muted">With faded secondary text</small></h5>
+                <h6>h6. Bootstrap heading <small class="text-muted">With faded secondary text</small></h6>
+            </div>
+            <hr>
+
+            <p class="lead">
+                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium adipisci aliquid cum
+                delectus eius et eveniet fugiat itaque minima molestias, mollitia nam nulla numquam quibusdam
+                quidem quod recusandae reiciendis sapiente soluta tempore temporibus totam vero. Assumenda
+                debitis earum expedita, facilis harum illum minus quia rem similique unde! Dicta, quasi?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ea facilis fugit libero
+                odit quae reiciendis, repellendus tempore. Adipisci assumenda aut dolor eius ipsam nam
+                nesciunt non nulla quos repellendus.
+            </p>
+            <hr>
+
+            <a href="javascript:">This is a link to demonstrate color!</a><br>
+            <a href="javascript:">Another link!</a><br>
+            <a href="javascript:" disabled class="disabled">Disabled link!</a><br>
+        </section>
+
+        <section id="list">
+            <h3>List</h3>
+            <ul>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>Nulla volutpat aliquam velit
+                    <ul>
+                        <li>Phasellus iaculis neque</li>
+                        <li>Purus sodales ultricies</li>
+                        <li>Vestibulum laoreet porttitor sem</li>
+                        <li>Ac tristique libero volutpat at</li>
+                    </ul>
+                </li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+            </ul>
+
+            <ol>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Consectetur adipiscing elit</li>
+                <li>Integer molestie lorem at massa</li>
+                <li>Facilisis in pretium nisl aliquet</li>
+                <li>Nulla volutpat aliquam velit</li>
+                <li>Faucibus porta lacus fringilla vel</li>
+                <li>Aenean sit amet erat nunc</li>
+                <li>Eget porttitor lorem</li>
+            </ol>
+        </section>
+
+        <section id="table">
+            <h3>Table <small class="text-muted">(bordered, striped and hoverable)</small></h3>
+            <table class="table table-bordered table-striped table-hover">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h3>Small Table <small class="text-muted">(bordered, striped and hoverable)</small></h3>
+            <table class="table table-bordered table-striped table-hover table-sm">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <ngb-pagination [collectionSize]="70" [pageSize]="10" [(page)]="page"></ngb-pagination>
+        </section>
+
+        <section id="alerts">
+            <h3>Alerts</h3>
+            <div class="alert alert-primary">
+                A simple primary alert with <a href="javascript:" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-secondary">
+                A simple secondary alert with <a href="javascript:" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-success">
+                A simple success alert with <a href="javascript:" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-danger">
+                A simple danger alert with <a href="javascript:" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-warning">
+                A simple warning alert with <a href="javascript:" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-info">
+                A simple info alert with <a href="javascript:" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-light">
+                A simple light alert with <a href="javascript:" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+            <div class="alert alert-dark">
+                A simple dark alert with <a href="javascript:" class="alert-link">an example link</a>. Give it a click if you like.
+            </div>
+
+            <h3>Alert with additional content</h3>
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Well done!</h4>
+                <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                <hr>
+                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+            </div>
+        </section>
+
+        <section id="badges">
+            <h3>Badges</h3>
+            <span class="badge badge-primary">Primary</span>&nbsp;
+            <span class="badge badge-secondary">Secondary</span>&nbsp;
+            <span class="badge badge-success">Success</span>&nbsp;
+            <span class="badge badge-danger">Danger</span>&nbsp;
+            <span class="badge badge-warning">Warning</span>&nbsp;
+            <span class="badge badge-info">Info</span>&nbsp;
+            <span class="badge badge-light">Light</span>&nbsp;
+            <span class="badge badge-dark">Dark</span>
+
+            <hr>
+
+            <span class="badge badge-pill badge-primary">Primary</span>&nbsp;
+            <span class="badge badge-pill badge-secondary">Secondary</span>&nbsp;
+            <span class="badge badge-pill badge-success">Success</span>&nbsp;
+            <span class="badge badge-pill badge-danger">Danger</span>&nbsp;
+            <span class="badge badge-pill badge-warning">Warning</span>&nbsp;
+            <span class="badge badge-pill badge-info">Info</span>&nbsp;
+            <span class="badge badge-pill badge-light">Light</span>&nbsp;
+            <span class="badge badge-pill badge-dark">Dark</span>
+        </section>
+
+        <section id="buttons">
+            <h3>Buttons</h3>
+            <button type="button" class="btn btn-primary">Primary</button>&nbsp;
+            <button type="button" class="btn btn-secondary">Secondary</button>&nbsp;
+            <button type="button" class="btn btn-success">Success</button>&nbsp;
+            <button type="button" class="btn btn-danger">Danger</button>&nbsp;
+            <button type="button" class="btn btn-warning">Warning</button>&nbsp;
+            <button type="button" class="btn btn-info">Info</button>&nbsp;
+            <button type="button" class="btn btn-link">Link</button>
+
+            <h3>Buttons <small class="text-muted">(disabled)</small></h3>
+            <button type="button" class="btn btn-primary" disabled>Primary</button>&nbsp;
+            <button type="button" class="btn btn-secondary" disabled>Secondary</button>&nbsp;
+            <button type="button" class="btn btn-success" disabled>Success</button>&nbsp;
+            <button type="button" class="btn btn-danger" disabled>Danger</button>&nbsp;
+            <button type="button" class="btn btn-warning" disabled>Warning</button>&nbsp;
+            <button type="button" class="btn btn-info" disabled>Info</button>&nbsp;
+            <button type="button" class="btn btn-link" disabled>Link</button>
+
+            <h3>Buttons <small class="text-muted">(outlined)</small></h3>
+            <button type="button" class="btn btn-outline-primary">Primary</button>&nbsp;
+            <button type="button" class="btn btn-outline-secondary">Secondary</button>&nbsp;
+            <button type="button" class="btn btn-outline-success">Success</button>&nbsp;
+            <button type="button" class="btn btn-outline-danger">Danger</button>&nbsp;
+            <button type="button" class="btn btn-outline-warning">Warning</button>&nbsp;
+            <button type="button" class="btn btn-outline-info">Info</button>&nbsp;
+            <button type="button" class="btn btn-outline-link">Link</button>
+
+            <h3>Buttons <small class="text-muted">(disabled outline)</small></h3>
+            <button type="button" class="btn btn-outline-primary" disabled>Primary</button>&nbsp;
+            <button type="button" class="btn btn-outline-secondary" disabled>Secondary</button>&nbsp;
+            <button type="button" class="btn btn-outline-success" disabled>Success</button>&nbsp;
+            <button type="button" class="btn btn-outline-danger" disabled>Danger</button>&nbsp;
+            <button type="button" class="btn btn-outline-warning" disabled>Warning</button>&nbsp;
+            <button type="button" class="btn btn-outline-info" disabled>Info</button>&nbsp;
+            <button type="button" class="btn btn-outline-link" disabled>Link</button>
+
+            <h3>Button sizes</h3>
+            <button type="button" class="btn btn-primary btn-sm">Small button</button>&nbsp;
+            <button type="button" class="btn btn-primary">Regular button</button>&nbsp;
+            <button type="button" class="btn btn-primary btn-lg">Large button</button>
+
+            <h3>Block button</h3>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+        </section>
+
+        <section id="button-groups">
+            <h3>Button group toggle</h3>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+                </label>
+            </div>
+        </section>
+
+        <section id="card">
+            <div class="row">
+                <div class="col-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p>Some other text used in 2nd para.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Primary card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card border-primary mb-3">
+                        <div class="card-header text-white bg-primary">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Custom card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+
+            </div>
+        </section>
+
+        <section id="datepicker">
+            <h3>Datepicker</h3>
+            <div class="row">
+                <div class="col-6">
+                    <ngb-datepicker #d></ngb-datepicker>
+                </div>
+                <div class="col-6">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #d="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="material-icons">
+                                        calendar_today
+                                    </i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="dropdown" class="clearfix">
+            <h3>Dropdown</h3>
+            <div class="dropdown-menu" id="dropdown-example">
+                <span class="dropdown-item-text">Dropdown item text</span>
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item disabled" href="#">Disabled link</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+            &nbsp;
+            <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-primary" ngbDropdownToggle>Dropdown button</button>
+                <div ngbDropdownMenu>
+                    <a href="javascript:" class="dropdown-item">Action - 1</a>
+                    <a href="javascript:" class="dropdown-item disabled">Another Action</a>
+                    <a href="javascript:" class="dropdown-item">Something else is here</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="javascript:" class="dropdown-item">Something else</a>
+                </div>
+            </div>
+            &nbsp;
+            <div ngbDropdown class="d-inline-block">
+                <a class="btn btn-secondary" href="javascript:" ngbDropdownToggle>Dropdown link</a>
+
+                <div ngbDropdownMenu>
+                    <a class="dropdown-item" href="javascript:">Action</a>
+                    <a class="dropdown-item disabled" href="javascript:">Another action</a>
+                    <a class="dropdown-item" href="javascript:">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:">Separated link</a>
+                </div>
+            </div>
+            &nbsp;
+            <div class="btn-group" ngbDropdown>
+                <button type="button" class="btn btn-danger">Action</button>
+                <button type="button" class="btn btn-danger dropdown-toggle-split" ngbDropdownToggle></button>
+                <div class="dropdown-menu" ngbDropdownMenu>
+                    <a class="dropdown-item" href="javascript:">Action</a>
+                    <a class="dropdown-item disabled" href="javascript:">Another action</a>
+                    <a class="dropdown-item" href="javascript:">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:">Separated link</a>
+                </div>
+            </div>
+            &nbsp;
+            <div ngbDropdown #dropdownForm="ngbDropdown" autoClose="false" class="d-inline-block">
+                <a class="btn btn-secondary" href="javascript:" ngbDropdownToggle>Dropdown form</a>
+
+                <div ngbDropdownMenu>
+                    <form class="px-4 py-3">
+                        <div class="form-group">
+                            <label for="exampleDropdownFormEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleDropdownFormPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck">
+                                Remember me
+                            </label>
+                        </div>
+                        <button type="button" class="btn btn-primary" (click)="closeDropdown(dropdownForm)">Sign in</button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:">New around here? Sign up</a>
+                    <a class="dropdown-item" href="javascript:">Forgot password?</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="form">
+            <h3>Forms</h3>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Password</label>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain
+                            spaces, special characters, or emoji.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text" class="form-control is-valid" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text" class="form-control is-invalid" id="inputZip">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="validationCustomUsername">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username"
+                               aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Check me out
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+        </section>
+
+        <section id="input-group">
+            <h3>Input groups</h3>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                </div>
+            </div>
+
+            <label for="basic-url">Your vanity URL</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                </div>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">$</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <div class="input-group-append">
+                    <span class="input-group-text">.00</span>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">With textarea</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" aria-label="Checkbox for following text input">
+                    </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with checkbox">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="radio" aria-label="Radio button for following text input">
+                    </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with radio button">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">First and last name</span>
+                </div>
+                <input type="text" aria-label="First name" class="form-control">
+                <input type="text" aria-label="Last name" class="form-control">
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+                </div>
+                <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="modal">
+            <h3>Modal</h3>
+
+            <button class="btn btn-primary" (click)="open(content)">Launch demo modal</button>
+
+            <ng-template #content let-modal>
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A blanditiis error expedita ipsam maiores maxime odio, quis quod suscipit vel.
+                    </p>
+                    <form>
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of birth</label>
+                            <div class="input-group">
+                                <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd"
+                                       name="dp" ngbDatepicker #dp="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="input-group-text cursor-pointer" (click)="dp.toggle()" type="button">
+                                        <i class="material-icons">calendar_today</i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" (click)="modal.close('Cancel click')">Cancel</button>
+                    <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Save</button>
+                </div>
+            </ng-template>
+        </section>
+
+        <section id="popover">
+            <h3>Popovers</h3>
+
+            <button type="button" class="btn btn-outline-secondary mr-2" placement="top"
+                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus"
+                    popoverTitle="Popover on top">
+                Popover on top
+            </button>
+
+            <button type="button" class="btn btn-outline-secondary mr-2" placement="right"
+                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus"
+                    popoverTitle="Popover on right">
+                Popover on right
+            </button>
+
+            <button type="button" class="btn btn-outline-secondary mr-2" placement="bottom"
+                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus"
+                    popoverTitle="Popover on bottom">
+                Popover on bottom
+            </button>
+
+            <button type="button" class="btn btn-outline-secondary mr-2" placement="left"
+                    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus"
+                    popoverTitle="Popover on left">
+                Popover on left
+            </button>
+
+            <div class="d-inline-block mr-2">
+                <ng-template #popContent>Hello, <b>{{name}}</b>!</ng-template>
+                <ng-template #popTitle>Fancy <b>content!!</b></ng-template>
+                <button type="button" class="btn btn-outline-secondary" [ngbPopover]="popContent" [popoverTitle]="popTitle">
+                    Markup and bindings!
+                </button>
+            </div>
+
+            <button type="button" class="btn btn-outline-secondary"
+                    ngbPopover="You see, I show up on hover!"
+                    triggers="mouseenter:mouseleave" popoverTitle="Pop title">
+                Hover over me!
+            </button>
+        </section>
+
+        <section id="tabset">
+            <ngb-tabset>
+                <ngb-tab title="Simple">
+                    <ng-template ngbTabContent>
+                        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt
+                            tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor,
+                            williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
+                            dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid.
+                            Aliquip placeat salvia cillum iphone.
+                            Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                    </ng-template>
+                </ngb-tab>
+                <ngb-tab>
+                    <ng-template ngbTabTitle><b class="font-italic">Fancy</b> title</ng-template>
+                    <ng-template ngbTabContent>
+                        Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+                        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson
+                            artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress,
+                            commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
+                            Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+                            Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown.
+                            Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut
+                            DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown,
+                            tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+                    </ng-template>
+                </ngb-tab>
+                <ngb-tab title="Disabled" [disabled]="true">
+                    <ng-template ngbTabContent>
+                        <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh
+                            elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet.
+                            Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra et
+                            nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et.
+                            Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla
+                            tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis.
+                            Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis
+                            dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem
+                            ali ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+                    </ng-template>
+                </ngb-tab>
+            </ngb-tabset>
+        </section>
+
+        <section id="toastr">
+            <button type="button" class="btn btn-primary mr-2" (click)="toastrSuccess()">Toastr Success</button>
+            <button type="button" class="btn btn-primary mr-2" (click)="toastrError()">Toastr Error</button>
+            <button type="button" class="btn btn-primary mr-2" (click)="toastrWarning()">Toastr Warning</button>
+            <button type="button" class="btn btn-primary mr-2" (click)="toastrInfo()">Toastr Info</button>
+        </section>
+
+        <section id="tooltip">
+            <button type="button" class="btn btn-primary mr-2" placement="top" ngbTooltip="Tooltip on top">
+                Tooltip on top
+            </button>
+            <button type="button" class="btn btn-primary mr-2" placement="right" ngbTooltip="Tooltip on right">
+                Tooltip on right
+            </button>
+            <button type="button" class="btn btn-primary mr-2" placement="bottom" ngbTooltip="Tooltip on bottom">
+                Tooltip on bottom
+            </button>
+            <button type="button" class="btn btn-primary mr-2" placement="left" ngbTooltip="Tooltip on left">
+                Tooltip on left
+            </button>
+        </section>
+
+        <section id="select">
+            <ng-select [items]="people"
+                       bindLabel="name"
+                       bindValue="id"
+                       [(ngModel)]="selectedPersonId">
+            </ng-select>
+            <div>[{{selectedPersonId}}]</div>
+            See <a href="https://github.com/ng-select/ng-select" target="_blank">documentation</a> for events and methods.
+        </section>
+
+        <section id="wizard-steps">
+            <app-wizard-steps
+                    [steps]="wizardSteps"
+                    [activeStepId]="activeWizardStepId"
+                    [allowRandomStepping]="false"
+                    (stepChange)="wizardStepChange($event)">
+            </app-wizard-steps>
+
+            <div *ngIf="activeWizardStepId==1">Step 1</div>
+            <div *ngIf="activeWizardStepId==1">Step 2</div>
+            <div *ngIf="activeWizardStepId==1">Step 3</div>
+        </section>
+
+        <section>
+            ...
+        </section>
+    </div>
+</div>

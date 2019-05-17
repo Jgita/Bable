@@ -1,0 +1,130 @@
+<h2 class="margin-bottom-15">Upload Activities</h2>
+
+<app-upload-summary></app-upload-summary>
+
+<div class="card margin-top-20">
+    <div class="card-body">
+        <div *ngIf="isLoaded">
+            <div class="card bg-light mb-3">
+                <div class="card-body slim font-weight-bold">
+                    <button type="button" class="btn btn-link float-right padding-right-0"
+                            [disabled]="!(filters.collectionId || filters.mapId || filters.statusId)"
+                            (click)="clearFilters()">Clear Filters</button>
+                    <label class="inline-block mr-3">Filters:</label>
+                    <ng-select class="inline-block width-percent-25 mr-3"
+                               [items]="allCollections"
+                               placeholder="Select Collection"
+                               bindLabel="name"
+                               bindValue="id"
+                               (change)="onCollectionChange()"
+                               [(ngModel)]="filters.collectionId">
+                    </ng-select>
+                    <ng-select class="inline-block width-percent-25 mr-3"
+                               [items]="availableMaps"
+                               placeholder="Select Map"
+                               bindLabel="name"
+                               bindValue="id"
+                               (change)="onFilterChange()"
+                               [(ngModel)]="filters.mapId">
+                    </ng-select>
+                    <ng-select class="inline-block width-percent-25 mr-3"
+                               [items]="statuses"
+                               placeholder="Select Status"
+                               bindLabel="name"
+                               bindValue="id"
+                               (change)="onFilterChange()"
+                               [(ngModel)]="filters.statusId">
+                    </ng-select>
+                </div>
+            </div>
+            <div class="card bg-light mb-3">
+                <div class="card-body slim font-weight-bold">
+                    {{uploads.count | number}} records found
+                </div>
+            </div>
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Data File</th>
+                        <th class="width-180">Date Uploaded</th>
+                        <th class="width-percent-15">Map Location</th>
+                        <th class="width-percent-15">Map Name</th>
+                        <th class="text-center width-percent-15">Validation Warnings</th>
+                        <th class="width-percent-15">Document Status</th>
+                        <th class="width-50">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let item of uploads.list" [appDump]="item">
+                    <tr>
+                        <td>
+                            <a *ngIf="item.status === 8 || item.status === 7" href="javascript:">{{item.dataFile}}</a>
+                            <span *ngIf="item.status > 8 || item.status < 7">{{item.dataFile}}</span>
+                        </td>
+                        <td>{{item.uploadedAt | date: 'medium'}}</td>
+                        <td><a href="javascript:">{{item.collectionName}}</a></td>
+                        <td><a href="javascript:">{{item.mapName}}</a></td>
+                        <td class="text-center position-relative" [ngClass]="{'td-expanded': item.expandedName === 'exception'}">
+                            <div *ngIf="item.status === 9" class="small text-muted">
+                                Cannot generate warnings due to system exception.
+                            </div>
+                            <div *ngIf="item.status === 8 || item.status === 7">
+                                <div class="lead">{{item.currentElementErrorsCount | number}}</div>
+                                <div>
+                                    <a href="javascript:">{{item.currentErroneousElementsCount | number}} elements</a>&nbsp;<a
+                                        href="javascript:">{{item.currentErroneousRecordsCount | number}} records</a>
+                                </div>
+                            </div>
+                            <div *ngIf="item.status < 7" class="text-muted">Warnings will display after processing.</div>
+
+                            <a href="javascript:" *ngIf="item.notes"
+                               placement="top"
+                               [ngbTooltip]="item.expandedName === 'exception' ? 'Hide Exception' : 'Show Exception'"
+                               tooltipClass="margin-bottom-5"
+                               class="td-expand-icon"
+                               (click)="toggleExpansion($event, item, 'exception')"></a>
+                        </td>
+
+                        <td>
+                            <div *ngIf="item.status === 9">System Exception</div>
+                            <div *ngIf="item.status === 8 || item.status === 7">
+                                File Accepted
+                                <div class="small text-muted">Data is available for submission</div>
+                            </div>
+                            <div *ngIf="item.status < 7" class="text-muted">processing..</div>
+                        </td>
+                        <td class="text-center cell-action" ngbDropdown placement="bottom-right">
+                            <a href="javascript:" ngbDropdownToggle><i class="material-icons">flash_on</i></a>
+                            <div ngbDropdownMenu>
+                                <a href="javascript:" class="dropdown-item disabled">Delete</a>
+                                <a href="javascript:" class="dropdown-item disabled">Upload New Data</a>
+                                <a href="javascript:" class="dropdown-item disabled">Take Action</a>
+                                <a href="javascript:" class="dropdown-item">Start a Submission</a>
+                                <a href="javascript:" class="dropdown-item disabled">Download Duplicate Records</a>
+                                <a href="javascript:" class="dropdown-item">View Upload Details</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr *ngIf="item.expandedName === 'exception'" class="row-expanded">
+                        <td colspan="7">
+                            <div class="card">
+                                <div class="card-body">
+                                    Your file was rejected for the following reasons:<br>
+                                    <div class="callout callout-danger" [innerHTML]="item.notes"></div>
+                                    Would you like to <a routerLink="/uploads/new">upload new data</a>?
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <app-pagination
+                    [collectionSize]="uploads.count"
+                    [pageSize]="pageSize"
+                    [page]="pageIndex"
+                    (pageChange)="pageChanged($event)"
+                    (pageSizeChange)="pageSizeChanged($event)">
+            </app-pagination>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{
+  "id": "B683D6E0-9D39-41C6-BE6B-A81500014DC1",
+  "name": "panthbabel1@gmail.com",
+  "displayName": "Denormalized Team",
+  "email": "panthbabel1@gmail.com",
+  "phoneNumber": "1324567890",
+  "userGroupId": 2,
+  "defaultLob": "medicaid",
+  "turnOffEmailNotification": {
+    "medicare": false,
+    "medicaid": false,
+    "edge": false,
+    "apcd": false
+  },
+  "roles": {
+    "medicare": ["Read Only", "Uploader"],
+    "medicaid": ["Admin"],
+    "edge": ["Read Only", "Uploader"],
+    "apcd": ["Read Only"]
+  }
+}

@@ -1,0 +1,63 @@
+<h2 class="margin-bottom-15">Uploaded Encounters</h2>
+
+<app-upload-summary></app-upload-summary>
+
+<div class="card margin-top-20">
+    <div class="card-body">
+
+        <app-data-filters></app-data-filters>
+
+        <div *ngIf="isLoaded">
+            <div class="card bg-light mb-3">
+                <div class="card-body text-right slim font-weight-bold">
+                    {{records.noOfRecordsFound | number}} encounters found
+                </div>
+            </div>
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Encounter Id</th>
+                        <th>Member</th>
+                        <th>Provider</th>
+                        <th class="text-center width-130">Date of Service</th>
+                        <th class="text-center width-90 small">Associated Submissions</th>
+                        <th class="text-center width-90 small">Validation Warnings</th>
+                        <th class="text-center width-90 small">Response Errors</th>
+                        <th class="text-center width-150">Encounter Status</th>
+                        <th class="width-50">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let record of records.list">
+                        <td><a href="javascript:">{{record.claimId}}</a></td>
+                        <td><a href="javascript:">{{record.memberName}}</a></td>
+                        <td><a href="javascript:">{{record.providerName}}</a></td>
+                        <td class="text-center">{{record.dateOfService}}</td>
+                        <td class="text-center">{{record.associateSubmissionsCount | number}}</td>
+                        <td class="text-center">{{record.validationErrorCount | number}}</td>
+                        <td class="text-center">{{record.responseErrorCount | number}}</td>
+                        <td class="text-center">{{record.recordStatus.edps.recordStatusText}}</td>
+                        <!-- {{record.recordStatus['medicaid(pa)'].recordStatusText}} -->
+                        <td class="text-center cell-action" ngbDropdown placement="bottom-right">
+                            <a href="javascript:" ngbDropdownToggle><i class="material-icons">flash_on</i></a>
+                            <div ngbDropdownMenu>
+                                <a href="javascript:" class="dropdown-item">Action - 1</a>
+                                <a href="javascript:" class="dropdown-item">Another Action</a>
+                                <a href="javascript:" class="dropdown-item">Something else is here</a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <app-pagination
+                    [collectionSize]="records.noOfRecordsFound"
+                    [pageSize]="pageSize"
+                    [page]="pageIndex"
+                    (pageChange)="pageChanged($event)"
+                    (pageSizeChange)="pageSizeChanged($event)">
+            </app-pagination>
+        </div>
+
+    </div>
+</div>

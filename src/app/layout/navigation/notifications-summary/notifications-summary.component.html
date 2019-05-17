@@ -1,0 +1,29 @@
+<div id="notifications-summary">
+    <div class="ns-header">
+        <a href="javascript:;" (click)="markAllAsRead($event)" id="notification-mark-all-read" class="float-right">
+            Mark All as Read
+        </a>
+        <h5>Notifications</h5>
+    </div>
+    <div *ngFor="let item of list" (click)="markAsRead(item, $event)" class="ns-entry">
+        <a class="ns-btn-unread" href="javascript:;" title="Mark as Read" *ngIf="item.unread"><i class="material-icons">fiber_manual_record</i></a>
+        <div class="ns-message">
+            <div [innerHTML]="item.message"></div>
+            <div class="ns-entry-footer">
+                <i class="material-icons" *ngIf="item.type === 0 || item.type === 1">check_circle_outline</i>
+                <i class="material-icons" *ngIf="item.type === 2">offline_bolt</i>
+                <i class="material-icons" *ngIf="item.type === 3">error_outline</i>
+                <i class="material-icons" *ngIf="item.type === 4">info</i>
+
+                <span>{{item.createdAt | date: 'medium'}}</span>
+                <span *ngIf="item.content">
+                    . <a href="javascript:;" (click)="showDetail(item)">See Details</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!list.length" class="padding-15 center-align">No Notifications</div>
+    <div *ngIf="list.length" class="ns-footer">
+        <a routerLink="/notifications" class="btn btn-block btn-link" id="notification-show-all">Show All</a>
+    </div>
+</div>

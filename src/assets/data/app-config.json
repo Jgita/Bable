@@ -1,0 +1,959 @@
+{
+  "appPermissions": [
+    {
+      "label": "",
+      "children": [
+        {
+          "label": "Configurations",
+          "name": "configurations",
+          "hidden": true,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            },
+            {
+              "label": "Delete",
+              "name": "delete",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Lookup",
+          "name": "lookup",
+          "hidden": true,
+          "children": [
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Datacleanup",
+          "name": "datacleanup",
+          "hidden": true
+        },
+        {
+          "label": "Supportusers",
+          "name": "supportusers",
+          "hidden": true,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Create",
+              "name": "create",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            },
+            {
+              "label": "Delete",
+              "name": "delete",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Security",
+          "name": "security",
+          "hidden": true,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Create",
+              "name": "create",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Upload",
+          "name": "upload",
+          "hidden": true,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Datafilereviews",
+          "name": "datafilereviews",
+          "hidden": true,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Home",
+          "name": "home",
+          "hidden": true
+        },
+        {
+          "label": "Organizations",
+          "name": "organizations",
+          "hidden": true,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            },
+            {
+              "label": "Delete",
+              "name": "delete",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Roles",
+          "name": "roles",
+          "hidden": true,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Create",
+              "name": "create",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            },
+            {
+              "label": "Delete",
+              "name": "delete",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Users",
+          "name": "users",
+          "hidden": true,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Create",
+              "name": "create",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            },
+            {
+              "label": "Delete",
+              "name": "delete",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Ecq to Babel",
+          "name": "ecq-to-babel",
+          "hidden": true
+        },
+        {
+          "label": "Impersonate",
+          "name": "impersonate",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "label": "Settings",
+      "children": [
+        {
+          "label": "Product File Import",
+          "name": "productFileImport",
+          "hidden": false,
+          "children": [
+            {
+              "label": "Upload",
+              "name": "upload",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Line Of Businesses",
+          "name": "lineOfBusinesses",
+          "hidden": true,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Trading Partner Configuration",
+          "name": "tradingpartners",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Create",
+              "name": "create",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            },
+            {
+              "label": "Delete",
+              "name": "delete",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Unauthorized Attempts",
+          "name": "unauthorizedattempts",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Exports",
+              "name": "exports",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "User Activity",
+          "name": "useractivities",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Exports",
+              "name": "exports",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "RA Utility",
+          "name": "rautility",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Maps",
+          "name": "maps",
+          "hidden": false,
+          "children": [
+            {
+              "label": "Create",
+              "name": "create",
+              "hidden": false
+            },
+            {
+              "label": "Clone",
+              "name": "clone",
+              "hidden": false
+            },
+            {
+              "label": "Delete",
+              "name": "delete",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Collections",
+          "name": "collections",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Create",
+              "name": "create",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            },
+            {
+              "label": "Delete",
+              "name": "delete",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Sftp Credentials",
+          "name": "sftpcredentials",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Edit Rule Manager",
+          "name": "systemcolumneditrule",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            },
+            {
+              "label": "Exports",
+              "name": "exports",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Insights",
+          "name": "insights",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "RAPS Cluster Generator",
+          "name": "rapsclusterutility",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Data",
+      "children": [
+        {
+          "label": "File Tracker",
+          "name": "files",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Download",
+              "name": "download",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "View Upload Activity",
+          "name": "viewUploadActivity",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Provider Profile",
+          "name": "providerprofile",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Member Profile",
+          "name": "memberprofile",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Upload",
+          "name": "dataFile",
+          "hidden": false,
+          "children": [
+            {
+              "label": "Upload Data",
+              "name": "upload",
+              "hidden": false
+            },
+            {
+              "label": "Upload Review Data",
+              "name": "uploadReview",
+              "hidden": false
+            },
+            {
+              "label": "Upload Duplicate Encounter File",
+              "name": "uploadDuplicate",
+              "hidden": false
+            },
+            {
+              "label": "Upload Unlinked Chart For Approval",
+              "name": "uploadUnlinked",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "View Data",
+          "name": "viewData",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "records",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Claim Data",
+          "name": "claimView",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Submission Tracker",
+          "name": "submissiontracker",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Download",
+              "name": "download",
+              "hidden": false
+            },
+            {
+              "label": "Exports",
+              "name": "exports",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Upload Tracker",
+          "name": "uploadtracker",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Download",
+              "name": "download",
+              "hidden": false
+            },
+            {
+              "label": "Exports",
+              "name": "exports",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Record View / Element View",
+          "name": "validation",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Exports",
+              "name": "exports",
+              "hidden": false
+            }
+          ]
+        },
+        {
+          "label": "Data Exports",
+          "name": "dataexports",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Download",
+              "name": "download",
+              "hidden": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Submissions",
+      "children": [
+        {
+          "label": "Submission",
+          "name": "dataoutputs",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            },
+            {
+              "label": "Delete",
+              "name": "delete",
+              "hidden": false
+            },
+            {
+              "label": "Create",
+              "name": "create",
+              "hidden": false
+            },
+            {
+              "label": "Update",
+              "name": "update",
+              "hidden": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Risk Adjustment",
+      "children": [
+        {
+          "label": "Report",
+          "name": "riskanalysis",
+          "hidden": false,
+          "children": [
+            {
+              "label": "View",
+              "name": "view",
+              "hidden": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "userPermissions": {
+    "security": true,
+    "upload": true,
+    "datafilereviews": true,
+    "home": true,
+    "roles": true,
+    "users": true,
+    "impersonate": true,
+    "productFileImport": true,
+    "lineOfBusinesses": true,
+    "tradingpartners": true,
+    "unauthorizedattempts": true,
+    "useractivities": true,
+    "rautility": true,
+    "maps": true,
+    "collections": true,
+    "sftpcredentials": true,
+    "systemcolumneditrule": true,
+    "insights": true,
+    "rapsclusterutility": true,
+    "files": true,
+    "viewUploadActivity": true,
+    "providerprofile": true,
+    "memberprofile": true,
+    "dataFile": true,
+    "viewData": true,
+    "claimView": true,
+    "submissiontracker": true,
+    "uploadtracker": true,
+    "validation": true,
+    "dataexports": true,
+    "dataoutputs": true,
+    "riskanalysis": true,
+    "configurations": false,
+    "lookup": false,
+    "datacleanup": false,
+    "supportusers": false,
+    "organizations": false,
+    "ecq-to-babel": false
+  },
+  "tenant": {
+    "name": "Multiple Line of Business",
+    "authentication": 0,
+    "disabled": false
+  },
+  "user": {
+    "id": "4970B0B3-CCAE-472F-85F0-AA3A002221A6",
+    "name": "panthbabel1@gmail.com",
+    "label": "Admin",
+    "email": "panthbabel1@gmail.com",
+    "phoneNumber": "2028997949",
+    "group": 1,
+    "supportUserOrganizations": null,
+    "expiryDate": "2019-07-24T04:06:48.02Z",
+    "impersonatingUserId": null
+  },
+  "programProductsItems": [
+    {
+      "entityTypes": [
+        {
+          "id": 5,
+          "programProductId": "8ab1485a-28f0-4331-b3e7-06c82df717f1",
+          "entityType": 2,
+          "displayName": "Claims",
+          "shortName": "Claim",
+          "defaultBaseSegmentType": 6,
+          "recordCategories": [
+            {
+              "id": 3,
+              "baseSegmentType": 6,
+              "programProductEntityTypeId": 5,
+              "displayName": "Medical",
+              "recordTypes": [
+                {
+                  "id": 4,
+                  "recordCategoryId": 3,
+                  "displayName": "Institutional",
+                  "shortName": "I"
+                },
+                {
+                  "id": 5,
+                  "recordCategoryId": 3,
+                  "displayName": "Professional",
+                  "shortName": "P"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "id": "8ab1485a-28f0-4331-b3e7-06c82df717f1",
+      "name": "RAPS",
+      "shortName": "raps",
+      "programProductWeight": 128,
+      "hasAnyMap": true,
+      "stateName": "CMS"
+    },
+    {
+      "entityTypes": [
+        {
+          "id": 2,
+          "programProductId": "5553ae32-83f1-4a6d-804e-8feeeee6aab5",
+          "entityType": 2,
+          "displayName": "Claims",
+          "shortName": "Claim",
+          "defaultBaseSegmentType": 6,
+          "recordCategories": [
+            {
+              "id": 1,
+              "baseSegmentType": 6,
+              "programProductEntityTypeId": 2,
+              "displayName": "Medical",
+              "recordTypes": [
+                {
+                  "id": 1,
+                  "recordCategoryId": 1,
+                  "displayName": "Institutional",
+                  "shortName": "I"
+                },
+                {
+                  "id": 2,
+                  "recordCategoryId": 1,
+                  "displayName": "Professional",
+                  "shortName": "P"
+                },
+                {
+                  "id": 3,
+                  "recordCategoryId": 1,
+                  "displayName": "DME",
+                  "shortName": "Dme"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "baseSegmentType": 6,
+              "programProductEntityTypeId": 2,
+              "displayName": "Supplemental",
+              "recordTypes": [
+                {
+                  "id": 11,
+                  "recordCategoryId": 2,
+                  "displayName": "Unlinked",
+                  "shortName": "Unlinked"
+                },
+                {
+                  "id": 12,
+                  "recordCategoryId": 2,
+                  "displayName": "Linked",
+                  "shortName": "Linked"
+                },
+                {
+                  "id": 13,
+                  "recordCategoryId": 2,
+                  "displayName": "Pending",
+                  "shortName": "Pending"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "id": "5553ae32-83f1-4a6d-804e-8feeeee6aab5",
+      "name": "EDPS",
+      "shortName": "edps",
+      "programProductWeight": 64,
+      "hasAnyMap": true,
+      "stateName": "CMS"
+    },
+    {
+      "entityTypes": [
+        {
+          "id": 10,
+          "programProductId": "d1d72f0b-bb3d-4f79-b3df-ba04c65431c7",
+          "entityType": 1,
+          "displayName": "Members",
+          "shortName": "Member",
+          "defaultBaseSegmentType": 20,
+          "recordCategories": []
+        },
+        {
+          "id": 11,
+          "programProductId": "d1d72f0b-bb3d-4f79-b3df-ba04c65431c7",
+          "entityType": 2,
+          "displayName": "Claims",
+          "shortName": "Claim",
+          "defaultBaseSegmentType": 6,
+          "recordCategories": [
+            {
+              "id": 7,
+              "baseSegmentType": 6,
+              "programProductEntityTypeId": 11,
+              "displayName": "Medical",
+              "recordTypes": [
+                {
+                  "id": 8,
+                  "recordCategoryId": 7,
+                  "displayName": "Institutional",
+                  "shortName": "I"
+                },
+                {
+                  "id": 9,
+                  "recordCategoryId": 7,
+                  "displayName": "Professional",
+                  "shortName": "P"
+                },
+                {
+                  "id": 10,
+                  "recordCategoryId": 7,
+                  "displayName": "DME",
+                  "shortName": "Dme"
+                }
+              ]
+            },
+            {
+              "id": 9,
+              "baseSegmentType": 6,
+              "programProductEntityTypeId": 11,
+              "displayName": "Supplemental",
+              "recordTypes": []
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "programProductId": "d1d72f0b-bb3d-4f79-b3df-ba04c65431c7",
+          "entityType": 3,
+          "displayName": "Providers",
+          "shortName": "Provider",
+          "defaultBaseSegmentType": 21,
+          "recordCategories": []
+        },
+        {
+          "id": 13,
+          "programProductId": "d1d72f0b-bb3d-4f79-b3df-ba04c65431c7",
+          "entityType": 4,
+          "displayName": "Products",
+          "shortName": "Product",
+          "defaultBaseSegmentType": 10,
+          "recordCategories": []
+        },
+        {
+          "id": 14,
+          "programProductId": "d1d72f0b-bb3d-4f79-b3df-ba04c65431c7",
+          "entityType": 5,
+          "displayName": "PharmacyClaims",
+          "shortName": "PharmacyClaim",
+          "defaultBaseSegmentType": 9,
+          "recordCategories": [
+            {
+              "id": 8,
+              "baseSegmentType": 9,
+              "programProductEntityTypeId": 14,
+              "displayName": "Pharmacy",
+              "recordTypes": []
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "programProductId": "d1d72f0b-bb3d-4f79-b3df-ba04c65431c7",
+          "entityType": 6,
+          "displayName": "DentalClaims",
+          "shortName": "DentalClaim",
+          "defaultBaseSegmentType": 0,
+          "recordCategories": [
+            {
+              "id": 10,
+              "baseSegmentType": 0,
+              "programProductEntityTypeId": 15,
+              "displayName": "Dental",
+              "recordTypes": []
+            }
+          ]
+        }
+      ],
+      "id": "d1d72f0b-bb3d-4f79-b3df-ba04c65431c7",
+      "name": "APCD(MA)",
+      "shortName": "apcd(ma)",
+      "programProductWeight": 8,
+      "hasAnyMap": true,
+      "stateName": "MA"
+    }
+  ],
+  "blApiGatewayTimeout": 60,
+  "blRecordsQueryExecutionTimeLimit": 90,
+  "enableSplashScreen": true,
+  "isRaEnabled": false,
+  "isRaEdpsDemoEnabled": false,
+  "isRaEdgeDemoEnabled": false,
+  "isRecordingPanelEnabled": false,
+  "isDataCleanupEnable": false,
+  "isMyTaskEnable": false,
+  "isEditRuleEnable": false,
+  "isMedicaidDemoEnable": false,
+  "isSubmissionTrackerEnable": false,
+  "isUploadTrackerEnable": false
+}

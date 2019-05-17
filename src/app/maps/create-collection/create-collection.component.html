@@ -1,0 +1,64 @@
+<h2 class="margin-bottom-15">Create Collection</h2>
+<p>
+    Collections hold your maps. You may create unlimited collections, each containing an unlimited number of maps.
+    You may edit your collections at any time.
+</p>
+
+<div class="card">
+    <div class="card-body">
+        <form>
+            <div class="form-group row">
+                <label for="collection-name" class="col-2 col-form-label">Collection Name</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" id="collection-name" required>
+                </div>
+            </div>
+            <hr/>
+            <p>
+                Additionally, you can choose your preferred output formats.
+                Specifying how you intend to use your data will help us identify fields
+                that are required and provide better validation results.
+            </p>
+
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Program</th>
+                    <th>Available File Types</th>
+                    <th>Selected</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="nav flex-column nav-pills">
+                            <a href="javascript:" class="nav-link"
+                               *ngFor="let program of availablePrograms"
+                               [class.active]="program.name === selectedProgram.name"
+                               (click)="selectedProgram = program">{{program.name}}</a>
+                        </div>
+                    </td>
+                    <td>
+                        <!--<div *ngFor="let fileType of selectedProgram.fileTypes">{{fileType}}</div>-->
+                        <div class="form-group form-check" *ngFor="let fileType of selectedProgram.fileTypes; let i=index">
+                            <input type="checkbox" class="form-check-input" id="file-type-{{i}}"
+                                   (change)="toggleSelectedFileType(fileType)" [checked]="selectedFileTypes.indexOf(fileType)>-1">
+                            <label class="form-check-label" for="file-type-{{i}}">{{fileType}}</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div *ngFor="let fileType of selectedFileTypes">
+                            <i class="material-icons">done</i> {{fileType}}
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="text-right">
+                <a class="btn btn-link" routerLink="/maps">Cancel</a>
+                <button class="btn btn-primary" (click)="save()">Create Collection</button>
+            </div>
+        </form>
+    </div>
+</div>

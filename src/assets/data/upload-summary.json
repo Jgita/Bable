@@ -1,0 +1,400 @@
+{
+  "id": "f2dafbbc-473a-46b5-bd3e-a9e5017c1e9d",
+  "dataFile": "XYZ UAT SMALL 09-18-2018_deidentified_2_wReversal_V3.txt",
+  "uploadedAt": "2019-01-31T04:03:48.277Z",
+  "currentErroneousRecordsCount": 1390,
+  "currentErroneousElementsCount": 2,
+  "currentElementErrorsCount": null,
+  "encounterCount": 20100,
+  "totalErroneousEncounter": 434393,
+  "totalEncounter": 2065163,
+  "status": 8,
+  "runId": 772,
+  "uploadedFileCount": 386,
+  "percentageInError": 21.03,
+  "hasMap": true,
+  "notes": null,
+  "progress": 100.0,
+  "isAnyFileInProcess": false,
+  "baseSegmentTypeId": 6,
+  "jobDetails": {
+    "runId": 772,
+    "jobId": "f2dafbbc-473a-46b5-bd3e-a9e5017c1e9d",
+    "jobStatus": 8,
+    "loadExecutionDetails": {
+      "processors": [{
+        "id": 3043,
+        "processorKey": "InitializeFileUploadProcessor",
+        "description": {
+          "processorKey": "InitializeFileUploadProcessor",
+          "title": "Initialize data file upload",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:04:04.417Z",
+          "completedAt": "2019-01-30T23:04:05.433Z",
+          "estimatedCompletionTime": null,
+          "elapsed": "00:00:01.0042099",
+          "elapsedText": "1 second"
+        },
+        "executionOrder": 1
+      }, {
+        "id": 3044,
+        "processorKey": "LoadToRedshiftFileUploadProcessor",
+        "description": {
+          "processorKey": "LoadToRedshiftFileUploadProcessor",
+          "title": "Load data file into a temp table in redshift",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:04:05.767Z",
+          "completedAt": "2019-01-30T23:05:33.313Z",
+          "estimatedCompletionTime": null,
+          "elapsed": "00:01:27.2927891",
+          "elapsedText": "1 minute 27 seconds"
+        },
+        "executionOrder": 2
+      }, {
+        "id": 3045,
+        "processorKey": "CheckColumnLengthFileUploadProcessor",
+        "description": {
+          "processorKey": "CheckColumnLengthFileUploadProcessor",
+          "title": "Check column's maximum length",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:05:33.407Z",
+          "completedAt": "2019-01-30T23:05:33.527Z",
+          "estimatedCompletionTime": null,
+          "elapsed": null,
+          "elapsedText": null
+        },
+        "executionOrder": 3
+      }, {
+        "id": 3046,
+        "processorKey": "CheckValidDataFormat",
+        "description": {
+          "processorKey": "CheckValidDataFormat",
+          "title": "Check whether linenumber contains valid data",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:05:33.617Z",
+          "completedAt": "2019-01-30T23:05:33.837Z",
+          "estimatedCompletionTime": null,
+          "elapsed": null,
+          "elapsedText": null
+        },
+        "executionOrder": 4
+      }, {
+        "id": 3047,
+        "processorKey": "PrimaryKeyNullCheckFileUploadProcessor",
+        "description": {
+          "processorKey": "PrimaryKeyNullCheckFileUploadProcessor",
+          "title": "Check whether primary key fields are null",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:05:33.923Z",
+          "completedAt": "2019-01-30T23:05:34.11Z",
+          "estimatedCompletionTime": null,
+          "elapsed": null,
+          "elapsedText": null
+        },
+        "executionOrder": 5
+      }, {
+        "id": 3048,
+        "processorKey": "UploadOverwriteFileUploadProcessor",
+        "description": {
+          "processorKey": "UploadOverwriteFileUploadProcessor",
+          "title": "Process Upload-Overwrite data file",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 4,
+          "progressPercentage": null,
+          "skipReason": "Execute only if Overwrite UploadMode option is selected in ControlFile.",
+          "exceptionMessage": null,
+          "startedAt": null,
+          "completedAt": null,
+          "estimatedCompletionTime": null,
+          "elapsed": null,
+          "elapsedText": null
+        },
+        "executionOrder": 6
+      }, {
+        "id": 3049,
+        "processorKey": "UpdateContractIdFileUploadProcessor",
+        "description": {
+          "processorKey": "UpdateContractIdFileUploadProcessor",
+          "title": "Check ContractTypeId and update contract type ID",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:05:34.207Z",
+          "completedAt": "2019-01-30T23:05:34.39Z",
+          "estimatedCompletionTime": null,
+          "elapsed": null,
+          "elapsedText": null
+        },
+        "executionOrder": 7
+      }, {
+        "id": 3050,
+        "processorKey": "UpdateFileDashboardEntryFileUploadProcessor",
+        "description": {
+          "processorKey": "UpdateFileDashboardEntryFileUploadProcessor",
+          "title": "Update status of File-Dashboard entry",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:05:34.517Z",
+          "completedAt": "2019-01-30T23:05:34.747Z",
+          "estimatedCompletionTime": null,
+          "elapsed": null,
+          "elapsedText": null
+        },
+        "executionOrder": 8
+      }, {
+        "id": 3051,
+        "processorKey": "CheckPrimaryKeyDuplicateFileUploadProcessor",
+        "description": {
+          "processorKey": "CheckPrimaryKeyDuplicateFileUploadProcessor",
+          "title": "Check primary key duplicate",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:05:34.91Z",
+          "completedAt": "2019-01-30T23:05:57.787Z",
+          "estimatedCompletionTime": null,
+          "elapsed": "00:00:22.7242369",
+          "elapsedText": "22 seconds"
+        },
+        "executionOrder": 9
+      }, {
+        "id": 3052,
+        "processorKey": "ExecuteDataLoadFileUploadProcessor",
+        "description": {
+          "processorKey": "ExecuteDataLoadFileUploadProcessor",
+          "title": "Execute data load operations in redshift",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:05:57.897Z",
+          "completedAt": "2019-01-30T23:09:49.98Z",
+          "estimatedCompletionTime": null,
+          "elapsed": "00:03:51.7592681",
+          "elapsedText": "3 minutes 51 seconds"
+        },
+        "executionOrder": 10
+      }, {
+        "id": 3053,
+        "processorKey": "CreateRapsClusterFileUploadProcessor",
+        "description": {
+          "processorKey": "CreateRapsClusterFileUploadProcessor",
+          "title": "Create RAPS cluster",
+          "description": null,
+          "enableConfigurationKey": "raps.enableCreateCluster"
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:09:50.4Z",
+          "completedAt": "2019-01-30T23:10:04.197Z",
+          "estimatedCompletionTime": null,
+          "elapsed": "00:00:13.6880175",
+          "elapsedText": "13 seconds"
+        },
+        "executionOrder": 11
+      }, {
+        "id": 3054,
+        "processorKey": "CheckCmsDuplicateDataFileProcessor",
+        "description": {
+          "processorKey": "CheckCmsDuplicateDataFileProcessor",
+          "title": "Check CMS duplicate",
+          "description": null,
+          "enableConfigurationKey": "fileupload.isDuplicateCheckingEnable"
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:10:04.303Z",
+          "completedAt": "2019-01-30T23:10:11.37Z",
+          "estimatedCompletionTime": null,
+          "elapsed": "00:00:06.5814174",
+          "elapsedText": "6 seconds"
+        },
+        "executionOrder": 12
+      }, {
+        "id": 3055,
+        "processorKey": "UpdateAffectedSubmissionFileUploadProcessor",
+        "description": {
+          "processorKey": "UpdateAffectedSubmissionFileUploadProcessor",
+          "title": "Update affected submission",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:10:11.853Z",
+          "completedAt": "2019-01-30T23:10:12.65Z",
+          "estimatedCompletionTime": null,
+          "elapsed": "00:00:00.5005341",
+          "elapsedText": "no time"
+        },
+        "executionOrder": 13
+      }, {
+        "id": 3056,
+        "processorKey": "FileUploadProcessor",
+        "description": {
+          "processorKey": "FileUploadProcessor",
+          "title": "Process uploaded file",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 4,
+          "progressPercentage": null,
+          "skipReason": "Execute only if  option is selected in ControlFile",
+          "exceptionMessage": null,
+          "startedAt": null,
+          "completedAt": null,
+          "estimatedCompletionTime": null,
+          "elapsed": null,
+          "elapsedText": null
+        },
+        "executionOrder": 14
+      }, {
+        "id": 3057,
+        "processorKey": "HistoricalFileUploadProcessor",
+        "description": {
+          "processorKey": "HistoricalFileUploadProcessor",
+          "title": "Process historical file",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 4,
+          "progressPercentage": null,
+          "skipReason": "Execute only if HistoricalFileFormat 'Submission Status with full record' is selected in ControlFile",
+          "exceptionMessage": null,
+          "startedAt": null,
+          "completedAt": null,
+          "estimatedCompletionTime": null,
+          "elapsed": null,
+          "elapsedText": null
+        },
+        "executionOrder": 15
+      }, {
+        "id": 3058,
+        "processorKey": "UpdateRecordCountsFileUploadProcessor",
+        "description": {
+          "processorKey": "UpdateRecordCountsFileUploadProcessor",
+          "title": "Update records count",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:10:12.75Z",
+          "completedAt": "2019-01-30T23:10:12.873Z",
+          "estimatedCompletionTime": null,
+          "elapsed": null,
+          "elapsedText": null
+        },
+        "executionOrder": 16
+      }, {
+        "id": 3059,
+        "processorKey": "CompleteFileUploadProcessor",
+        "description": {
+          "processorKey": "CompleteFileUploadProcessor",
+          "title": "Execute load completed operations",
+          "description": null,
+          "enableConfigurationKey": null
+        },
+        "executionDetails": {
+          "status": 2,
+          "progressPercentage": null,
+          "skipReason": null,
+          "exceptionMessage": null,
+          "startedAt": "2019-01-30T23:10:12.967Z",
+          "completedAt": "2019-01-30T23:10:13.743Z",
+          "estimatedCompletionTime": null,
+          "elapsed": "00:00:00.5122185",
+          "elapsedText": "no time"
+        },
+        "executionOrder": 17
+      }],
+      "id": "f2dafbbc-473a-46b5-bd3e-a9e5017c1e9d",
+      "totalNoOfProcessors": 17,
+      "noOfProcessors": 14,
+      "noOfProcessorsRunning": 0,
+      "noOfProcessorsCompleted": 14,
+      "noOfProcessorsSkipped": 3,
+      "status": 2,
+      "progressPercentage": 100,
+      "skipReason": null,
+      "exceptionMessage": null,
+      "startedAt": "2019-01-30T23:04:04.41Z",
+      "completedAt": "2019-01-30T23:10:13.843Z",
+      "estimatedCompletionTime": null,
+      "elapsed": "00:06:09.0071599",
+      "elapsedText": "6 minutes 9 seconds"
+    }
+  }
+}

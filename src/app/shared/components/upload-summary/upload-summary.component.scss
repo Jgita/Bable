@@ -1,0 +1,63 @@
+@import "variables";
+
+.stats {
+  /*border: 1px solid rgba($black, .07);*/
+  text-align: center;
+
+  .stat {
+    padding: 1.5rem 1rem;
+
+    & + .stat {
+      border-left: 1px solid $card-border-color;
+    }
+
+    &.stat-all {
+      background: rgba($blue, .1);
+    }
+    &.stat-acceptable {
+      background: rgba($green, .10);
+
+      .stat-percentage {
+        color: $green;
+      }
+    }
+
+    &.stat-caution {
+      background: rgba($orange, .10);
+
+      .stat-percentage {
+        color: $orange;
+      }
+    }
+
+    &.stat-warning {
+      background: rgba($red, .10);
+
+      .stat-percentage {
+        color: $red;
+      }
+    }
+  }
+
+  .stat-header {
+
+  }
+  .stat-about {
+
+  }
+  .stat-count {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: $gray-600;
+  }
+  .stat-sub {
+    font-size: 12px;
+    color: $gray-700;
+  }
+  .stat-percentage {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 80px;
+  }
+}

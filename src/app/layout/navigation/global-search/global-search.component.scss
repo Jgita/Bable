@@ -1,0 +1,23 @@
+@import "variables";
+
+#global-search-container{
+  width: 600px;
+  padding: 15px;
+
+  .btn-group{
+    width: 100%;
+    .btn{
+      width: 33.33%;
+    }
+  }
+
+  .btn-light.active{
+    color: $white!important;
+    background: darken($primary, 5%)!important;
+    border-color: darken($primary, 5%)!important;
+  }
+  a{
+    color: $white;
+
+  }
+}

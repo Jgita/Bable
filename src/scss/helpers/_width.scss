@@ -1,0 +1,14 @@
+﻿/*
+    width classes. Use them like
+    <div class="width-percent-50">50 percent</div>
+    <div class="width-50">50px</div>
+*/
+
+$widthPercents: 0, 5, 10, 15, 20, 25, 30, 40, 50, 60, 70, 80, 90, 100;
+@each $wp in $widthPercents {
+    .width-percent-#{$wp} { width: $wp * 1% !important; }
+}
+$widthValues: 20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 130, 150, 170, 180, 200, 225, 250, 300, 350, 400, 500, 600, 700, 800, 900, 1000;
+@each $wv in $widthValues {
+    .width-#{$wv} { width: $wv + px !important; }
+}

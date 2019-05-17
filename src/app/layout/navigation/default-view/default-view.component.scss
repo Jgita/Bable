@@ -1,0 +1,13 @@
+@import "variables";
+
+.btn-light.active{
+  color: $white!important;
+  background: darken($primary, 5%)!important;
+  border-color: darken($primary, 5%)!important;
+}
+
+.activeRadioBtn{
+  color: $white!important;
+  background: darken($primary, 5%)!important;
+  border-color: darken($primary, 5%)!important;
+}

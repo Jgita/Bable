@@ -1,0 +1,108 @@
+<header class="header">
+    <div class="body-container">
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-expand-sm navbar-dark">
+                <a class="navbar-brand" routerLink="/">
+                    <img src="assets/images/logo--babel.png" height="26" width="148"/>
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/risk-adjustment" routerLinkActive="active">Risk Adjustment</a>
+                    </li>
+                    <li class="nav-item" ngbDropdown routerLinkActive="active">
+                        <a class="nav-link" href="javascript:" ngbDropdownToggle>Data</a>
+                        <div ngbDropdownMenu>
+                            <a class="dropdown-item" routerLink="/files" routerLinkActive="active">File Dashboard</a>
+                            <a class="dropdown-item" routerLink="/uploads/new" routerLinkActive="active">Upload Data</a>
+                            <a class="dropdown-item" routerLink="/uploads" routerLinkActive="active">View Upload
+                                Activity</a>
+                            <a class="dropdown-item" routerLink="/data" routerLinkActive="active">View Data</a>
+                            <a class="dropdown-item" href="javascript:">Upload Reviewed Data</a>
+                            <a class="dropdown-item" href="javascript:">Upload Duplicate Encounter File</a>
+                            <a class="dropdown-item" href="javascript:">Data Exports</a>
+                        </div>
+                    </li>
+                    <li class="nav-item" ngbDropdown routerLinkActive="active">
+                        <a class="nav-link" href="javascript:" ngbDropdownToggle>Submissions</a>
+                        <div ngbDropdownMenu>
+                            <a class="dropdown-item" routerLink="/submissions/new" routerLinkActive="active">Start a New Submission</a>
+                            <a class="dropdown-item" routerLink="/submissions" routerLinkActive="active">View Upcoming
+                                Submissions</a>
+                            <a class="dropdown-item" href="javascript:">View Batches</a>
+                            <a class="dropdown-item" href="javascript:">View Submission Activity</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/my-tasks" routerLinkActive="active">My Tasks</a>
+                    </li>
+                    <li class="nav-item" ngbDropdown routerLinkActive="active">
+                        <a class="nav-link" href="javascript:" ngbDropdownToggle>Settings</a>
+                        <div ngbDropdownMenu>
+                            <a class="dropdown-item" routerLink="/users" routerLinkActive="active">Users &amp;
+                                Groups</a>
+                            <a class="dropdown-item" routerLink="/sftp" routerLinkActive="active">FTP Credentials</a>
+                            <a class="dropdown-item" routerLink="/maps" routerLinkActive="active">Maps</a>
+                            <a class="dropdown-item" routerLink="/trading-partners" routerLinkActive="active">Trading
+                                Partner Configuration</a>
+                            <!--<a class="dropdown-item" routerLink="/user-activities"
+                                routerLinkActive="active">User Activities</a>
+                            <a class="dropdown-item" routerLink="/unauthorized-attempts"
+                                routerLinkActive="active">Unauthorized Attempts</a>-->
+                        </div>
+                    </li>
+                    <li class="nav-item ml-2" ngbDropdown
+                        placement="bottom-right"
+                        autoClose="outside"
+                        #navGlobalSearch="ngbDropdown">
+                        <a class="nav-link" href="javascript:" ngbDropdownToggle><i
+                                class="material-icons">search</i></a>
+                        <div ngbDropdownMenu class="dropdown-menu-right">
+                            <app-global-search *ngIf="navGlobalSearch.isOpen()"
+                                               (globalSearchCancelled)="navGlobalSearch.close()"></app-global-search>
+                        </div>
+                    </li>
+                    <li class="nav-item" ngbDropdown placement="bottom-right">
+                        <a class="nav-link" href="javascript:" ngbDropdownToggle>
+                            <i class="material-icons">notifications</i>
+                            <span *ngIf="notificationsSummary.unread" class="header-notification-count">{{notificationsSummary.unread}}</span>
+                        </a>
+                        <div ngbDropdownMenu class="dropdown-menu-right" id="notifications-summary">
+                            <app-notifications-summary [list]="notificationsSummary.list"></app-notifications-summary>
+                        </div>
+                    </li>
+                    <li class="nav-item" ngbDropdown placement="bottom-right" routerLinkActive="active">
+                        <a class="nav-link" href="javascript:" ngbDropdownToggle><i
+                                class="material-icons">person</i></a>
+                        <div ngbDropdownMenu class="dropdown-menu-right">
+                            <a class="dropdown-item" routerLink="/my-profile" routerLinkActive="active">User Profile</a>
+                            <a class="dropdown-item" routerLink="/organization-profile" routerLinkActive="active">Organization
+                                Profile</a>
+                            <a class="dropdown-item" routerLink="/logout">Logout</a>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-dropdown-full nav-default-view"
+                        id="nav-default-view" #navDefaultView="ngbDropdown"
+                        ngbDropdown placement="bottom-right"
+                        (openChange)="openChange($event)"
+                        [autoClose]="false">
+                        <a class="nav-link" href="javascript:" ngbDropdownToggle>
+                            <span class="program-label">{{defaultViewParams.state | uppercase}}: {{defaultViewParams.contract}}</span>
+                            <span class="program-param-label">{{printDefaultViewLabel() | uppercase}}</span>
+                        </a>
+                        <div ngbDropdownMenu class="dropdown-menu-right nav-dropdown-full-content" id="default-view-content">
+                            <app-default-view
+                                    (defaultViewCancelled)="navDefaultView.close()"
+                                    (defaultViewChanged)="defaultViewChanged($event); navDefaultView.close()"
+                                    [activeProgram]="activeProgram"
+                                    [defaultViewParams]="defaultViewParams"></app-default-view>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

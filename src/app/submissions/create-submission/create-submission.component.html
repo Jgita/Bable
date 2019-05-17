@@ -1,0 +1,41 @@
+<app-wizard-steps
+        [steps]="wizardSteps"
+        [activeStepId]="activeWizardStepId"
+        [allowRandomStepping]="true"
+        (stepChange)="wizardStepChange($event)">
+</app-wizard-steps>
+
+<div class="card" *ngIf="activeWizardStepId === 1">
+    <div class="card-body">
+        <h3 class="margin-bottom-20">Start a New Submission</h3>
+        <p>Step 1</p>
+    </div>
+</div>
+
+<div class="card" *ngIf="activeWizardStepId === 2">
+    <div class="card-body">
+        <h3 class="margin-bottom-20">Configure</h3>
+        <p>Step 2</p>
+    </div>
+</div>
+
+<div class="card" *ngIf="activeWizardStepId === 3">
+    <div class="card-body">
+        <h3 class="margin-bottom-20">Filter</h3>
+        <p>Step 3</p>
+    </div>
+</div>
+
+<div class="card" *ngIf="activeWizardStepId === 4">
+    <div class="card-body">
+        <h3 class="margin-bottom-20">Overview</h3>
+        <p>Step 4</p>
+    </div>
+</div>
+
+<div class="card" *ngIf="activeWizardStepId === 5">
+    <div class="card-body">
+        <h3 class="margin-bottom-20">Schedule</h3>
+        <p>Step 5</p>
+    </div>
+</div>

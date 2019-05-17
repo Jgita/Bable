@@ -1,0 +1,166 @@
+<h2 class="margin-bottom-15">Create Trading Partner</h2>
+<form>
+    <div class="card margin-bottom-20">
+        <div class="card-body">
+            <div class="form-group row">
+                <label for="name" class="col-2 col-form-label">Trading Partner Name</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" id="name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="program" class="col-2 col-form-label">Program</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" id="program">
+                </div>
+            </div>
+
+            <h3 class="margin-top-30 margin-bottom-20">Submitter Information</h3>
+
+            <div class="form-group row">
+                <label for="program" class="col-2 col-form-label">&nbsp;</label>
+                <div class="col-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="submitter">
+                        <label class="form-check-label" for="submitter">
+                            Use Babel Submitter
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="true">
+                <div class="form-group row">
+                    <label for="submitter-id" class="col-2 col-form-label">Submitter ID</label>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="submitter-id">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="submitter-name" class="col-2 col-form-label">Submitter Last or Organization Name</label>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="submitter-name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="submitter-contact-name" class="col-2 col-form-label">Submitter's Contact Name</label>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="submitter-contact-name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="submitter-contact" class="col-2 col-form-label">Telephone No</label>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="submitter-contact">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card margin-bottom-20">
+        <div class="card-body">
+            <h3 class="margin-bottom-20">Payer Information</h3>
+
+            <div class="form-group row">
+                <label for="payper-contact-id" class="col-2 col-form-label">Payer Contract Id</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" id="payper-contact-id">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="payer-name" class="col-2 col-form-label">Payer Last or Organization Name</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" id="payer-name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="payer-address" class="col-2 col-form-label">Payer Address Line</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" id="payer-address">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="payer-city" class="col-2 col-form-label">Payer City Name</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" id="payer-city">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="payer-state" class="col-2 col-form-label">Payer State Code</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" id="payer-state">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="payer-zip" class="col-2 col-form-label">Payer ZIP Code</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" id="payer-zip">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="payer-contract" class="col-2 col-form-label">Contract Type</label>
+                <div class="col-4">
+                    <input type="text" class="form-control" id="payer-contract">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card margin-bottom-20">
+        <div class="card-body">
+            <h3 class="margin-bottom-20">Configuration</h3>
+
+            <div class="form-group row">
+                <label for="program" class="col-2 col-form-label">&nbsp;</label>
+                <div class="col-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="transmission">
+                        <label class="form-check-label" for="transmission">
+                            Use Babel Transmission
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="true">
+                <div class="form-group row">
+                    <label for="ftp-host" class="col-2 col-form-label">FTP Server IP Address</label>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="ftp-host">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ftp-port" class="col-2 col-form-label">FTP Server Port</label>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="ftp-port">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ftp-username" class="col-2 col-form-label">Username</label>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="ftp-username">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ftp-password" class="col-2 col-form-label">Password</label>
+                    <div class="col-4">
+                        <input type="text" class="form-control" id="ftp-password">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card margin-bottom-20">
+        <div class="card-body">
+            <div class="form-group row margin-bottom-0">
+                <label class="col-2 col-form-label">&nbsp;</label>
+                <div class="col-10">
+                    <a routerLink="/trading-partners" class="btn btn-link margin-right-10">Cancel</a>
+                    <button class="btn btn-primary margin-right-10" (click)="testConnection()">Test Connection</button>
+                    <button class="btn btn-primary margin-right-10" (click)="save()">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

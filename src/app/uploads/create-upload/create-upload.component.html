@@ -1,0 +1,108 @@
+<h2 class="margin-bottom-15">Upload Data</h2>
+
+<app-wizard-steps
+        [steps]="wizardSteps"
+        [activeStepId]="activeWizardStepId"
+        [allowRandomStepping]="false"
+        (stepChange)="wizardStepChange($event)">
+</app-wizard-steps>
+
+<div class="card" *ngIf="activeWizardStepId === 1">
+    <div class="card-body">
+        <h3 class="margin-bottom-50">How would you like to upload your data?</h3>
+        
+        <div class="row margin-bottom-50">
+            <div class="col text-center">
+                <button class="btn btn-lg btn-primary">Upload via Babel</button>
+            </div>
+            <div class="col text-center">
+                <button class="btn btn-lg btn-primary" (click)="goToStep(2)">My data has been uploaded via FTP</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card" *ngIf="activeWizardStepId === 2">
+    <div class="card-body">
+        <h3>Create Your Control File</h3>
+        <p>This control file will tell your data which map to use and how to process it.</p>
+        <div class="row">
+            <div class="col-5">
+                <div class="form-group">
+                    <label for="">Data File Name</label>
+                    <input type="text" class="form-control" id="">
+                    <small class="form-text text-muted">
+                        The name of the file on the server to reference. If uploading a compressed file,
+                        make this the name of the uncompressed .txt, .csv or .pde file.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label for="">Map</label>
+                    <input type="text" class="form-control" id="">
+                </div>
+                <div class="form-group">
+                    <label for="">Merge Type</label>
+                    <input type="text" class="form-control" id="">
+                </div>
+                <div class="form-group">
+                    <label for="">Pre Processing Template</label>
+                    <input type="text" class="form-control" id="">
+                </div>
+                <div class="form-group">
+                    <label for="">Historical File Format</label>
+                    <input type="text" class="form-control" id="">
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="">
+                    <label class="form-check-label" for="">Trim White Spaces</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="">
+                    <label class="form-check-label" for="">Split Code</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="">
+                    <label class="form-check-label" for="">Merge DRG Line</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="">
+                    <label class="form-check-label" for="">Remove Reversal Claims</label>
+                </div>
+                <!--<div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="">
+                    <label class="form-check-label" for="">Chart Review</label>
+                </div>-->
+
+                <div class="text-right">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+            <div class="col-5 col-push-2"></div>
+        </div>
+        <hr class="margin-top-30"/>
+        <div class="row">
+            <div class="col-5">
+                <button type="button" class="btn btn-primary padding-left-10">
+                    <i class="material-icons">chevron_left</i> Previous
+                </button>
+            </div>
+            <div class="col-1">
+
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn btn-primary float-right">Start Validation</button>
+                <em class="padding-right-180 display-block">
+                    Before starting validation, ensure that your data file has been uploaded to the
+                    Babel servers and you have saved an accompanying control file.
+                </em>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card" *ngIf="activeWizardStepId === 3">
+    <div class="card-body">
+        Step 3
+    </div>
+</div>

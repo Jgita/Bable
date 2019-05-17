@@ -1,0 +1,226 @@
+<form #f="ngForm" (ngSubmit)="onSubmitedForm(f)">
+    <div class="card margin-bottom-15">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-4">
+                    <label class="mr-2">Show Program: </label>
+                    <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="filters.program">
+                        <label ngbButtonLabel class="btn-primary">
+                            <input ngbButton type="radio" [value]="1"> Medicaid {{getActiveProgram()}}
+                        </label>
+                        <!--<label ngbButtonLabel class="btn-primary">
+                      <input ngbButton type="radio" [value]="2"> EDGE
+                  </label>-->
+                    </div>
+                </div>
+                <div class="col-8 text-right">
+                    <label class="mr-2">Data Type: </label>
+                    <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="filters.claimType">
+                        <label ngbButtonLabel class="btn-primary">
+                            <input ngbButton type="radio" [value]="1"> Claim
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <label class="mr-2">Contracts: </label>
+            <div class="form-check form-check-inline margin-left-15" *ngFor="let contract of contracts;let i = index">
+                <input class="form-check-input" type="checkbox" id="contract-{{contract.contractId}}" (change)="onChangeContracts($event.target.checked, contract)"
+                    [value]="contract.contractId" ngModel name="contractDetails">
+                <label class="form-check-label" for="contract-{{contract.contractId}}">{{contract.contractId}}</label>
+            </div>
+        </div>
+        <div class="card-body">
+            <label class="mr-2">Claim Types: </label>
+            <div class="form-check form-check-inline margin-left-15" *ngFor="let claimType of claimTypesRes; let i = index">
+                <input class="form-check-input" type="checkbox" id="{{claimType.id}}" name="claimDetails" [value]="claimType.shortName" (change)="onChangeClaimType($event.target.checked, claimType)"
+                    ngModel name="ClaimTypes">
+                <label class="form-check-label" for="claim-type-{{i}}">{{claimType.displayName}}</label>
+            </div>
+        </div>
+        <div class="card-body">
+            <label class="mr-2">Claim Status: </label>
+            <div class="form-check form-check-inline margin-left-15" *ngFor="let status of statuses">
+                <input class="form-check-input" type="checkbox" id="{{status.key}}" [value]="status" (change)="onChangeClaimStatus($event.target.checked, status)"
+                    ngModel name="claimStatusDetails">
+                <label class="form-check-label" for="{{status.key}}">{{status.value}}</label>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="form-row">
+                <label class="mr-2">Search By: </label>
+                <div class="form-group col-md-2">
+                    <select class="form-control" (change)="searchViewDataChange($event)">
+                        <option *ngFor="let item of searchByViewData" value={{item.value}}>
+                            {{item.text}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2" *ngIf="SearchTextPlaceholder != 'Please select' && SearchTextPlaceholder">
+                    <input type="text" class="form-control full-width" name="{{SearchTextPlaceholderValue}}" [(ngModel)]="idNameOptionValue"
+                        placeholder="{{SearchTextPlaceholder}}">
+                </div>
+
+                <div class="col-7">
+                    <label class="mr-2">Void/Replacement Claims: </label>
+                    <div class="form-check form-check-inline margin-left-15" *ngFor="let voidReplaceItem of voidReplaceOptionsItems[0].options;let i = index">
+                        <input class="form-check-input" type="checkbox" id="voidReplaceItem-{{voidReplaceItem.value}}" (change)="onChangeVoidReplaceClaim($event.target.checked, voidReplaceItem)"
+                            [value]="voidReplaceItem.value" ngModel name="claimStates">
+                        <label class="form-check-label" for="voidReplaceItem-{{voidReplaceItem.value}}">{{voidReplaceItem.text}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-2">
+                    <label class="mr-2">Find by dates: </label>
+                    <div>
+                        <select class="form-control" (change)="FilterOptionChange($event)">
+                            <option *ngFor="let item of dateOptionsItems[0].options" value={{item.value}}>
+                                {{item.text}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-2" *ngIf="FillDateFormVisible">
+                    <label class="mr-2">Fill Date: </label>
+                    <button type="button" class="close" aria-describedby="modal-title" (click)="RemoveFilterByDate('Fill Date','fillDate')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" name="fillDateFrom" [(ngModel)]="FromFillDate" ngbDatepicker #d1="ngbDatepicker">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary calendar" (click)="d1.toggle()" type="button">
+                                    <i class="material-icons">
+                                        calendar_today
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                        <span>-to-</span>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="ToFillDate" name="fillDateTo" ngbDatepicker #d2="ngbDatepicker">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary calendar" (click)="d2.toggle()" type="button">
+                                    <i class="material-icons">
+                                        calendar_today
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2" *ngIf="DateOfServiceFormVisible">
+                    <label class="mr-2">Service Date: </label>
+                    <button type="button" class="close" aria-describedby="modal-title" (click)="RemoveFilterByDate('Service Date','dateOfService')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="FromDateOfService" name="dateOfServiceFrom" ngbDatepicker
+                                #d3="ngbDatepicker">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary calendar" (click)="d3.toggle()" type="button">
+                                    <i class="material-icons">
+                                        calendar_today
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                        <span>-to-</span>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="ToDateOfService" name="dateOfServiceTo" ngbDatepicker #d4="ngbDatepicker">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary calendar" (click)="d4.toggle()" type="button">
+                                    <i class="material-icons">
+                                        calendar_today
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2" *ngIf="DateOfUploadFormVisible">
+                    <label class="mr-2">Date Uploaded: </label>
+                    <button type="button" class="close" aria-describedby="modal-title" (click)="RemoveFilterByDate('Date Uploaded','dateOfUpload')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="FromDateOfUpload" name="dateOfUploadFrom" ngbDatepicker
+                                #d5="ngbDatepicker">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary calendar" (click)="d5.toggle()" type="button">
+                                    <i class="material-icons">
+                                        calendar_today
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                        <span>-to-</span>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="ToDateOfUpload" name="dateOfUploadTo" ngbDatepicker #d6="ngbDatepicker">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary calendar" (click)="d6.toggle()" type="button">
+                                    <i class="material-icons">
+                                        calendar_today
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2" *ngIf="DateOfSubmissionFormVisible">
+                    <label class="mr-2">Date of Submission: </label>
+                    <button type="button" class="close" aria-describedby="modal-title" (click)="RemoveFilterByDate('Date of Submission','dateOfSubmission')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="FromDateOfSubmission" name="dateOfSubmissionFrom" ngbDatepicker
+                                #d7="ngbDatepicker">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary calendar" (click)="d7.toggle()" type="button">
+                                    <i class="material-icons">
+                                        calendar_today
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                        <span>-to-</span>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="ToDateOfSubmission" name="dateOfSubmissionTo" ngbDatepicker
+                                #d8="ngbDatepicker">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary calendar" (click)="d8.toggle()" type="button">
+                                    <i class="material-icons">
+                                        calendar_today
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <!-- <button class="btn btn-primary float-right">Show Results</button> -->
+            <button class="btn btn-primary float-right" name="btnSubmit" id="btnSubmit" type="submit">Show Results</button>
+            <button class="btn btn-link float-right">Reset Filters</button>
+            <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-primary" id="reporting" ngbDropdownToggle>Reporting</button>
+                <div ngbDropdownMenu>
+                    <button class="dropdown-item">Error Report</button>
+                    <button class="dropdown-item">Reconciliation Report</button>
+                    <button class="dropdown-item">Risk Adjustment Report</button>
+                    <button class="dropdown-item">Export Duplicates to Excel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
